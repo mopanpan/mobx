@@ -13,4 +13,4 @@ FastClick.attach(document.body);
 ReactDOM.render(<Provider store={store}><App /></Provider>,document.getElementById('root'));
 
 
-// <Provider {...store}><App /></Provider>
+

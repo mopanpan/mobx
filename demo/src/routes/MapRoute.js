@@ -1,7 +1,5 @@
 import React from 'react'
-
 import {Route,Switch,Redirect} from 'react-router-dom';
-
 
 const MapRoute =props=>(
     <Switch>
@@ -21,13 +19,7 @@ const MapRoute =props=>(
 
 export default MapRoute;
 
-
-// const MapRoute =()=>{
-//     return  <Switch>
-         
-//     </Switch>
-//  }
-
+// route.config.js 默认抛出的没有名字
 // const MapRoute =(props)=>(
 //     <Switch>
 //        {

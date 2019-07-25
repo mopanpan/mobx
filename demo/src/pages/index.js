@@ -2,15 +2,12 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 // import styles from './index.scss';
 import { MapRoute } from '../routes/index'
-import './index.scss';
+import './global.scss';
 import './font/iconfont.css'
 export class Index extends Component {
   render() {
     return (
       <>
-        <div className="header">
-
-        </div>
         <div className="main">
           <MapRoute route={this.props.route}></MapRoute>
 

@@ -9,4 +9,5 @@ export default class Home{
         console.log('type...', type);
         type==='+'? this.count++: this.count--;
     }
+    
 }

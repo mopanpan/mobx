@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 1rem auto;
+            border: 1px solid red;
+            width: 2rem;
+            height: 2rem;
+            font-size: 0.4rem;
+        }
+    </style>
+    <script>
+        (function () { // 解决不同手机dpr不一致的适配问题(解决了1px的问题)
+            var scale = 1.0;
+            scale = 1 / window.devicePixelRatio;
+            var meta = document.createElement('meta');
+            meta.setAttribute('name', 'viewport');
+            meta.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale +
+                ', minimum-scale=' + scale +
+                ', user-scalable=no');
+            document.head.appendChild(meta);
+        })(); //这样就不用自己写meta标签了
+
+
+        (function (doc, win, image_width) { //把这段代码写在html里
+            var docEl = doc.documentElement, //获取html标签
+                //orientationchange方向改变事件
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    //当前设备视口宽度
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / image_width) + 'px';
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+
+        })(document, window, 750); //设计稿是多少就给多少然后写 rem单位 除以100；
+    </script>
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <script>
+        document.querySelector('div').innerHTML = `您的屏幕是${window.devicePixelRatio}倍屏幕`
+    </script>
+</body>
+
+</html>

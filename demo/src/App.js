@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import {MapRoute,route} from './routes/index.js'
 export class App extends Component {
   render() {
@@ -11,4 +11,4 @@ export class App extends Component {
   }
 }
 
-export default App
+export default App;
