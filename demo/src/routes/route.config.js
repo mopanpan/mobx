@@ -29,6 +29,10 @@ const route = [
             {
                 path:"/mine",
                 component:Mine
+            },
+            {
+                from:"/",
+                to:"/home"
             }
          ]
      }
