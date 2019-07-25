@@ -1,21 +1,14 @@
-import React, { Component } from 'react';
-
-import {BrowserRouter} from 'react-router-dom'
-import {MyRouter,route} from './Router'
-class App extends Component {
-  
-
+import React, { Component } from 'react'
+import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import {MapRoute,route} from './routes/index.js'
+export class App extends Component {
   render() {
     return (
       <BrowserRouter>
-         <MyRouter route={route}>
-
-         </MyRouter>
-      
+         <MapRoute route={route}></MapRoute>
       </BrowserRouter>
-   
-    );
+    )
   }
 }
 
-export default App;
+export default App
