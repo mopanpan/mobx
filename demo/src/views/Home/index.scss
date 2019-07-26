@@ -270,6 +270,16 @@
 
                     .swiper-wrapper {
                         .swiper-slide {
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            display: inline-block;
+                            list-style-type: none;
+                            vertical-align: top;
+                            width: 318.75px;
+                            height: auto;
+                            box-sizing: border-box;
+                            margin: auto 5px;
                             .topGoodsItem {
                                 width: 90%;
                                 height: 5rem;
@@ -306,6 +316,7 @@
 //         width: 986.25px;
 //         cursor: inherit;
 //         box-sizing: border-box;
+
 //         .topGoodsItem{
 //             width: 90%;
 //             height: 5rem;
