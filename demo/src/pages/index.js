@@ -8,9 +8,6 @@ export class Index extends Component {
   render() {
     return (
       <>
-        <div className="header">
-
-        </div>
         <div className="main">
           <MapRoute route={this.props.route}></MapRoute>
 

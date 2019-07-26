@@ -4,8 +4,14 @@ import SpecialTopic from "../views/SpecialTopic";
 import Classify from '../views/Classify/index'
 import Cart from '../views/Cart/index'
 import Mine from '../views/Mine/index'
+import SpecialDetail from '../views/RouteDetail/SpecialDetail/index'
 
 const route = [
+    {
+        path:"/specialtopic/:id",
+        component:SpecialDetail
+    },
+ 
      {
          path:"/",
          component:Index,
@@ -16,7 +22,7 @@ const route = [
              },
              {
                 path:"/specialtopic",
-                component:SpecialTopic
+                component:SpecialTopic,
             },
             {
                 path:"/classify",
@@ -35,6 +41,7 @@ const route = [
                 to:"/home"
             }
          ]
-     }
+     },
+    
 ]
 export default route;
