@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss'
 import { inject, observer } from "mobx-react"
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Swiper from 'swiper';
 import '../../../node_modules/swiper/dist/css/swiper.css'
 // import { observer } from "mobx-react";
@@ -62,13 +62,13 @@ class Home extends Component {
                     <div className="brandWrap">
                         {
                             brandList && brandList.map(item => (
-                                <Link to={{ pathname: `/brandDetail/${item.id}`, state: { data: item } }} key={item.id} className="brandItem">
+                                <NavLink to={{ pathname: `/brandDetail/${item.id}`}} key={item.id} className="brandItem">
                                     <div className="brandItemName">{item.name}</div>
                                     <div className="brandItemMinPrice">
                                         {item.floor_pric}元起
                                         </div>
                                     <img src={item.new_pic_url} alt="" />
-                                </Link>
+                                </NavLink>
                             ))
                         }
                     </div>
@@ -87,3 +87,4 @@ class Home extends Component {
 }
 export default Home;
 //{`/brandDetail/${item.id}`}
+// {{ pathname: `/brandDetail/${item.id}`, state: { data: item } }}
