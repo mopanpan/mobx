@@ -3,6 +3,7 @@
     height: 100%;
     color: #000;
     background: #f5f5f9;
+    // background: #000;
 
     .slider {
         width: 100%;
@@ -112,11 +113,202 @@
                 }
             }
         }
-        
-        .newGoodsBox{
+    }
+
+    //  新品首发
+    .newGoodsBox {
+        margin-top: .2rem;
+        background: #fff;
+
+        // background: pink;
+        // padding:10px;
+        // margin-bottom:.2rem;
+        .newGoodsTitle {
+            height: 1rem;
+            background: #fff;
+            text-align: center;
+            font-size: .3rem;
+            line-height: 1rem;
+            letter-spacing: .02rem;
+            font-weight: 700;
+        }
+
+        .newGoodsWrap {
+            background: #fff;
+            flex-wrap: wrap;
+            display: flex;
+
+            .newGoodsItem {
+                width: 50%;
+                height: 4rem;
+                text-align: center;
+
+                // display: block;
+                // background: pink;
+                img {
+                    width: 89%;
+                    height: 60%;
+                    opacity: 1;
+                    transition: all 1s;
+                }
+
+                .newGoodsName {
+                    height: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: .3rem;
+                }
+
+                .newGoodsPrice {
+                    height: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: .3rem;
+                    color: #8b0000;
+                }
+            }
+        }
+    }
+
+    //人气推荐 margin-top
+    .hotGoodsBox {
+        margin-top: .2rem;
+        background: #fff;
+
+        .hotGoodsTitle {
+            height: 1rem;
+            background: #fff;
+            text-align: center;
+            font-size: .3rem;
+            line-height: 1rem;
+            letter-spacing: .02rem;
+            font-weight: 700;
+            padding: 0 .2rem;
+            border-bottom: 1px solid #a9a9a9;
+            // border-top:1px solid #ccc;
+        }
+
+        .hotGoodsWrap {
+            width: 100%;
+            padding: 0 .2rem;
+            min-height: 200px;
+            padding: 0 .2rem;
+
+            .hotGoodsItem {
+                width: 100%;
+                display: flex;
+                height: 3rem;
+                position: relative;
+                padding: .1rem 0;
+                border-bottom: 1px solid #a9a9a9;
+
+                img {
+                    width: 40%;
+                    // background: pink;
+                    padding: .1rem;
+                }
+
+                .hotGoodsInfos {
+                    flex: 1 1;
+                    padding: .5rem 0;
+
+                    // background: cyan;
+                    .hotGoodsName {
+                        color: #000000;
+                    }
+
+                    .hotGoodsInfo {
+                        color: #a9a9a9;
+                    }
+
+                    .hotGoodsPrice {
+                        color: #8b0000;
+                    }
+                }
+            }
+        }
+    }
+
+    // 专题精选
+    .topGoodsBox {
+        background: #fff;
+        margin-top: .2rem;
+
+        .topGoodsTitle {
+            height: 1rem;
+            background: #fff;
+            text-align: center;
+            font-size: .3rem;
+            line-height: 1rem;
+            letter-spacing: .02rem;
+            font-weight: 700;
+            // padding: 0 .2rem;
+            // border-bottom: 1px solid #a9a9a9;
+        }
+
+        .topGoodsWrap {
+            height: auto;
+            padding-bottom: .2rem;
+
+            .sliders {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                visibility: visible;
+
+                .swiper-container {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    visibility: visible;
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            .topGoodsItem {
+                                width: 90%;
+                                height: 5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
 
         }
     }
 }
 
 // display: -webkit-flex; // -webkit-flex-wrap: wrap;
+
+// .swiper-wrapper {
+//     position: relative;
+//     display: block;
+//     overflow: hidden;
+//     height: auto;
+//     margin: 0px;
+//     padding: 0px;
+//     transform: translate3d(0px, 0px, 0px);
+//     box-sizing: border-box;
+//     display: flex;
+//     .swiper-slide {
+//         transform: translate3d(28.125px, 0px, 0px);
+//         position: relative;
+//         display: block;
+//         margin: 0px -5px;
+//         padding: 0px;
+//         height: 252px;
+//         width: 986.25px;
+//         cursor: inherit;
+//         box-sizing: border-box;
+//         .topGoodsItem{
+//             width: 90%;
+//             height: 5rem;
+//         }
+//     }
+// }
