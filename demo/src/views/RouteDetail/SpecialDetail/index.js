@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import './index.scss'
 import { inject, observer } from 'mobx-react';
 import '@/pages/font/iconfont.css'
-@inject('specialDetail')
+@inject('specialDetail','specialTopic')
 @observer
 
 class SpecialDetail extends Component {
     componentDidMount() {
         this.props.specialDetail.getDataDetail(this.props.match.params.id)
+         this.props.specialTopic.getData()
     }
     render() {
 
         let propDetail = this.props.specialDetail.data
-        console.log(propDetail)
+        console.log(this.props.specialTopic.data)
+      
         return (
             // 专题详情
             <div className="SpecialDetail">
@@ -65,6 +67,19 @@ class SpecialDetail extends Component {
                         
                     </div>
 
+                    <div className="NewImgBox">
+                        {
+                            this.props.specialTopic.data&&this.props.specialTopic.data.map(item=>(
+                                   <div key={item.id}>
+                                       <div className="DownImg">
+                                       <img src={item.scene_pic_url} alt=""/>
+                                       </div>
+                                       <p>{item.title}</p>
+                                    </div> 
+                                     
+                            ))
+                        }
+                         </div>
                 </div>
             </div>
         )
