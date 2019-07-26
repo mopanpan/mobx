@@ -6,9 +6,9 @@ import {inject, observer} from 'mobx-react';
 
 class SpecialTopic extends Component{
     SpecialDetail=(item)=>{
+        // console.log(item)
      this.props.history.push(`/specialtopic/${item.id}`)
     }
-
     componentDidMount(){
         this.props.specialTopic.getData()
     }
@@ -19,7 +19,6 @@ class SpecialTopic extends Component{
                {
                    this.props.specialTopic.data&&this.props.specialTopic.data.map((item,index)=>(
                        <div key={item.id} className="BigBox" onClick={()=>this.SpecialDetail(item)}>
-                           {/* <MapRoute route={this.props.route}></MapRoute> */}
                          <div className="ImgBox">
                            <img src={item.scene_pic_url} alt=""/>
                        </div>
