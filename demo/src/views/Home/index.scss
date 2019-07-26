@@ -1,3 +1,118 @@
-.home{
-    color:red;
+.home {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    background: #f5f5f9;
+
+    .slider {
+        width: 100%;
+        height: 4.5rem;
+
+        .swiper-container {
+            width: 100%;
+            height: 4.5rem;
+
+            .swiper-wrapper {
+                width: 100%;
+                height: 4.5rem;
+
+                .swiper-slide {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination {
+            color: #000;
+        }
+    }
+
+    .channelWrap {
+        width: 100%;
+        height: 1.4rem;
+        padding: .2rem 0;
+        background: #fff;
+        display: -webkit-flex;
+        display: flex;
+        // margin-top:0.2rem;
+        // background: pink;
+
+        .channelItem {
+            width: 20%;
+            height: 100%;
+            background: #fff;
+
+            img {
+                height: 80%;
+                display: block;
+                padding: .2rem;
+                margin: auto;
+            }
+
+            div {
+                height: 20%;
+                font-size: .24rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .brandBox {
+        margin-top: .2rem;
+        background: #fff;
+
+        .brand {
+            height: 1rem;
+            background: #fff;
+            text-align: center;
+            font-size: .3rem;
+            line-height: 1rem;
+            letter-spacing: .02rem;
+            font-weight: 700;
+        }
+
+        .brandWrap {
+            background: #fff;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            .brandItem {
+                width: 50%;
+                height: 2.2rem;
+                position: relative;
+
+                .brandItemName {
+                    position: absolute;
+                    top: .2rem;
+                    left: .2rem;
+                    font-size: .3rem;
+                }
+
+                .brandItemMinPrice {
+                    position: absolute;
+                    top: .6rem;
+                    left: .2rem;
+                    font-size: .24rem;
+                    color: #a9a9a9;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+                    -webkit-transition: all 1s;
+                    transition: all 1s;
+                }
+            }
+        }
+    }
 }
+
+// display: -webkit-flex; // -webkit-flex-wrap: wrap;

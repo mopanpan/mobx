@@ -6,10 +6,15 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select:none;
     user-select:none;
+}
+
+a{
+    color:#000000;
 }
 
 body{
@@ -22,20 +27,23 @@ body,
 #root {
     width: 100%;
     height: 100%;
+    // overflow: hidden;
 }
 
 #root {
     display: flex;
     flex-direction: column;
 
-    .header {
-        width: 100%;
-        height: 50px;
-        background: #ccc;
-    }
+    // .header {
+    //     width: 100%;
+    //     height: 50px;
+    //     background: #ccc;
+    // }
 
     .main {
         flex: 1;
+        // overflow: hidden;
+        overflow: auto;
     }
 
     .footer {
@@ -44,7 +52,7 @@ body,
         padding:0.04rem 0;
         display: flex;
         align-items: center;
-        box-shadow: 0 0 10px #999;
+        box-shadow: 0 0 0.2rem #999;
         li {
             flex: 1;
             text-align: center;
