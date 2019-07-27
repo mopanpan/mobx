@@ -53,7 +53,7 @@ class Home extends Component {
         // console.log(homes.banner); 
         // console.log(homes.brandList); 
         // console.log(homes.categoryList); 
-        // console.log('````````````````````',this.props);
+        // console.log('````````````````````',this.props.home.homes);
         return (
             <div className="home" ref={bscroll => { this.bscroll = bscroll }}>
                 <div>
@@ -200,6 +200,9 @@ class Home extends Component {
     }
 }
 export default Home;
+
+
+
 // {`/brandDetail/${item.id}`}
 // {{ pathname: `/brandDetail/${item.id}`, state: { data: item } }}
 // {{ pathname: `/brandDetail/${item.id}`}}
