@@ -10,7 +10,6 @@ export default class SpecialDetail {
         getSpecialDetail({id:type}).then((data) => {
             console.log(data)
             this.data = data.data
-           
         })
     }
 }
