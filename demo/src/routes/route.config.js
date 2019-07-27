@@ -4,13 +4,20 @@ import SpecialTopic from "../views/SpecialTopic";
 import Classify from '../views/Classify/index'
 import Cart from '../views/Cart/index'
 import Mine from '../views/Mine/index'
+// 我的页面
 import Login from "../views/Login";
+
+// 首页
 import cateDetail from '../views/Detail/cateDetail.js'
 import BrandDetail from "../views/Detail/brandDetail/brandDetail"; // 品牌制造商直供
 import newGoodsDetail from '../views/Detail/newGoodsDetail/newGoodsDetail.js' // 新品首发详情
 import hotGoodsDetail from '../views/Detail/hotGoodsDetail/hotGoodsDetail' // 人气推荐
 import projectSelDetail from '../views/Detail/projectSelDetail/projectSelDetail.js' // 专题精选
-// rbac  vuereadElementMe 
+
+
+//专题
+import SpecialDetail from '../views/RouteDetail/SpecialDetail/index'
+
 const route = [
     {
         path: "/login",
@@ -36,6 +43,11 @@ const route = [
         path: "/projectSelDetail/:id",
         component: projectSelDetail
     },
+    //  专题
+    {
+        path: "/specialtopic/:id",
+        component: SpecialDetail
+    },
     {
         path: "/",
         component: Index,
@@ -46,7 +58,7 @@ const route = [
             },
             {
                 path: "/specialtopic",
-                component: SpecialTopic
+                component: SpecialTopic,
             },
             {
                 path: "/classify",
@@ -67,4 +79,12 @@ const route = [
         ]
     }
 ]
+// const route = [
+//     {
+//         path:"/specialtopic/:id",
+//         component:SpecialDetail
+//     },
+
+
+// ]
 export default route;
