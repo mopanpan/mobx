@@ -1,5 +1,5 @@
 import { observable, action } from "mobx";
-import {getSpecialTopic} from '../../serviers/specialTopic'
+import {getSpecialTopic} from '../../services/specialTopic'
 
 export default class SpecialTopic{
     // @observable 修饰属性

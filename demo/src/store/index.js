@@ -16,5 +16,4 @@ export default{
     classify,
     specialTopic,
     specialDetail
-   
 }
