@@ -13,7 +13,7 @@ class SpecialTopic extends Component{
         this.props.specialTopic.getData()
     }
     render() {
-          console.log('props...', this.props.specialTopic.data);
+         // console.log('props...', this.props.specialTopic.data);
         return (
             <div className="SpecialTopic">
                {

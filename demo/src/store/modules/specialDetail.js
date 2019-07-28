@@ -8,7 +8,7 @@ export default class SpecialDetail {
     // @action 修饰方法
     @action getDataDetail(type) {
         getSpecialDetail({id:type}).then((data) => {
-            console.log(data)
+            // console.log(data)
             this.data = data.data
         })
     }
