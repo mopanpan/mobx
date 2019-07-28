@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {inject, observer } from 'mobx-react'
 
 @inject('livHomeDetail')
-@observer
+@observer 
 class CateDetail extends Component {
   componentDidMount(){
         this.props.livHomeDetail.getNavDetailData();
