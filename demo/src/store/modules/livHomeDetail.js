@@ -5,7 +5,7 @@ import { observable, action } from "mobx";
 class LivHomeDetail{
     // @observable 修饰属性
     @observable navDetail = {}; // 组件里打印这个属性数据 
-    @observable manufacturers = {};
+    @observable manufacturers = {};  
     // @action 修饰方法
     @action getNavDetailData = async(params)=>{
         console.log('parsss',params)

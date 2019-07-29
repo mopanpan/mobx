@@ -149,8 +149,8 @@ class Home extends Component {
                                                     <Link to={`/projectSelDetail/${item.id}`} className="topGoodsItem">
                                                         <img src={item.scene_pic_url} alt="" />
                                                         <div className="topGoodSubTitle">
-                                                            关爱他成长的每一个足迹
-                                                        <span className="topGoodPrice">￥{item.price_info}</span>
+                                                             {item.title}
+                                                            <span className="topGoodPrice">￥{item.price_info}</span>
                                                         </div>
                                                         <div className="topGoodTitle">{item.subtitle}</div>
                                                     </Link>

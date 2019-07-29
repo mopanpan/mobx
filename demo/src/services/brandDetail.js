@@ -7,9 +7,11 @@ export function brandDetail(params) { // /brand/detail 26
 }
 
 
-// export function brandDetail(params) { // 
-//   console.log(params)
-//   return request.get('/goods/detail',{params});  
-// }
+
+//  获取商品详情
+export function productDetails(params) { // 
+  console.log(params)
+  return request.get('/goods/detail',{params});  
+}
 
 

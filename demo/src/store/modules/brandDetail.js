@@ -1,16 +1,22 @@
 import { observable, action } from "mobx";
-import { brandDetail } from '../../services/index.js'
+import { brandDetail, productDetails } from '../../services/index.js'
 
  class BrandDetail {
     // @observable 修饰属性
-    @observable branDetail = []
-
+    @observable branDetail = [];
+    @observable proDetail = [];
+    
     // @action 修饰方法
     @action getDataDetail = async(params)=>{
-       console.log(params)
+      //  console.log(params)
        let res = await brandDetail(params);
-       console.log(res)
-       this.branDetail = res.data; 
+      //  console.log('brand',res)
+       this.branDetail = res.data;  
+    }
+    @action getProDetail = async(params)=>{
+       let res = await productDetails(params);
+       console.log('production',res)
+       this.proDetail = res.data;
     }
 }
 
