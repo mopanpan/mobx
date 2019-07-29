@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import './cateDetail.scss'
 import Header from '../../../components/Header/Header.js';
 
-@inject('livHomeDetail')
+@inject('livHomeDetail','classifyList')
 @observer
 class CateDetail extends Component {
   state = {
@@ -16,9 +16,12 @@ class CateDetail extends Component {
   }
 
   componentDidMount() {
+
     this.props.livHomeDetail.getNavDetailData({
       id:this.props.match.params.id
     });
+
+    this.props.classifyList.getDataList()//商品ID
 
     this.bs = new BScroll(this.scrollNav, {
       scrollX: true,
@@ -27,7 +30,7 @@ class CateDetail extends Component {
     })
 
     this.props.livHomeDetail.getManufacturer(this.state.ind+1)
-   
+   console.log(this.props.classifyList,'2222222222222')
   }
 
   //  点击导航
@@ -66,7 +69,7 @@ class CateDetail extends Component {
     // console.log(currentCategory);
     // console.log(currentCategory.name);
     let {goodsList} = this.props.livHomeDetail.manufacturers;
-    console.log(goodsList)
+    console.log(goodsList,'5')
     return (
       <div className="tabPageContent">
         <Header title={this.state.headTitle} />

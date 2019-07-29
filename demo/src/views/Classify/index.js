@@ -13,6 +13,7 @@ class Classify extends Component {
     
     console.log(item,'111')
     this.props.classifyList.getDataList(item)
+    this.props.history.push(`/cateDetail/${item.id}`)
   }
   componentDidMount() {
     this.props.classify.moneths()
