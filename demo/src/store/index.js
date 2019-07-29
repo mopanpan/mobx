@@ -1,6 +1,5 @@
 // 引入模块
 import Home from './modules/home'
-// import Classify from './modules/classify.js';
 
 import SpecialTopic from './modules/specialTopic'//专题页
 import SpecialDetail from './modules/specialDetail'//专题详情
@@ -13,7 +12,6 @@ const classify = new Classify();
 const specialTopic = new SpecialTopic();
 const specialDetail = new SpecialDetail();
 const specialDetailList = new SpecialDetailList();
-// const classify = new Classify();
 
 export default{
     home,
