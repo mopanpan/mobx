@@ -15,20 +15,19 @@ class SpecialDetail extends Component {
     Topic=(item)=>{ 
         this.props.history.push(`/specialtopic/${item.id}`)
     }
+    toBack=()=>{
+        this.props.history.goBack(-1)
+    }
 
     render() {
         //this.props.specialTopic.data
         let propDetail = this.props.specialDetail.data
         let seeDownShow=this.props.specialDetailList.data.data
-      
-       
-     
-      
         return (
             // 专题详情
             <div className="SpecialDetail">
                 <div className="head">
-                    <p>&lt;</p>
+                    <p onClick={this.toBack}>&lt;</p>
                     <p>{propDetail.title}</p>
                 </div>
                 <div className="sec">

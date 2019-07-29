@@ -9,7 +9,7 @@ export default class SpecialDetailList {
     @action getDataDetailList(type) {
         // console.log(type)
         getSpecialDetailList({valueId:type,typeId:1}).then((data) => {
-            console.log(data,'data')
+            //console.log(data,'data')
             this.data = data.data
         })
     }

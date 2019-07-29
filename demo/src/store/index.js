@@ -1,9 +1,12 @@
 // 引入模块
 // 首页
 import Home from './modules/home'
+
 import Classify from './modules/classify.js';
 import LivHomeDetail from './modules/livHomeDetail.js' // 首页居家详情
+
 import BrandDetail from './modules/brandDetail.js';//制造商id 详情
+
 
 
 // 专题

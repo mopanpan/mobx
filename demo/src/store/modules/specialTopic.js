@@ -7,7 +7,7 @@ export default class SpecialTopic{
     // @action 修饰方法
     @action getData(){
         getSpecialTopic().then((data)=>{
-            console.log(data)
+            // console.log(data)
             this.data=data.data.data
         })
     }
