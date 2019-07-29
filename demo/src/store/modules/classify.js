@@ -1,10 +1,11 @@
 import { observable, action } from "mobx";
-import {getClassify,monet} from '../../serviers/classify'
+import {getClassify,monet,getClassifyList} from '../../serviers/classify'
 
 export default class Classify{
     // @observable 修饰属性
     @observable data=[]
     @observable monrtList=[]
+    @observable dataList=[]
     // @action 修饰方法
     @action moneths(){
         monet().then((res)=>{
@@ -13,7 +14,16 @@ export default class Classify{
     }
     @action getDataClassify(type){
         getClassify({id:type}).then((data)=>{
-            this.data=data.dat
+        //   console.log(data)
+            this.data=data.data.currentCategory
+        })
+    }
+
+    @action getDataList(type){
+        console.log(type)
+        getClassifyList(type).then((data)=>{
+          console.log(data)
+            this.dataList=data.data
         })
     }
 }
