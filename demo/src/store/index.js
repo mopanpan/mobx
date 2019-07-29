@@ -1,8 +1,11 @@
 // 引入模块
 // 首页
 import Home from './modules/home'
+<<<<<<< HEAD
 import Classify from './modules/classify.js';
 import LivHomeDetail from './modules/livHomeDetail.js' // 首页居家详情
+=======
+>>>>>>> mp
 
 
 
@@ -23,7 +26,6 @@ const livHomeDetail = new LivHomeDetail();
 const specialTopic = new SpecialTopic();
 const specialDetail = new SpecialDetail();
 const specialDetailList = new SpecialDetailList();
-// const classify = new Classify();
 
 export default{
     home,
