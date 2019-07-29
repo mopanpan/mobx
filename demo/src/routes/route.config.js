@@ -8,11 +8,14 @@ import Mine from '../views/Mine/index'
 import Login from "../views/Login";
 
 // 首页
-import cateDetail from '../views/Detail/cateDetail.js'
+import cateDetail from '../views/Detail/cateDetail/cateDetail.js'
 import BrandDetail from "../views/Detail/brandDetail/brandDetail"; // 品牌制造商直供
 import newGoodsDetail from '../views/Detail/newGoodsDetail/newGoodsDetail.js' // 新品首发详情
 import hotGoodsDetail from '../views/Detail/hotGoodsDetail/hotGoodsDetail' // 人气推荐
 import projectSelDetail from '../views/Detail/projectSelDetail/projectSelDetail.js' // 专题精选
+import GoodsDetail from '../views/Detail/goods/goodsDetail' //商品详情
+import CategorysDetail from '../views/Detail/CategorysDetail/categorysDetail' //更多居家详情
+
 
 
 //专题
@@ -24,7 +27,7 @@ const route = [
         component: Login
     },
     {
-        path: "/categorys/:id",
+        path: "/cateDetail/:id",
         component: cateDetail
     },
     {
@@ -42,6 +45,14 @@ const route = [
     {
         path: "/projectSelDetail/:id",
         component: projectSelDetail
+    },
+    {
+        path: "/goodsDetail/:id",
+        component: GoodsDetail
+    },
+    {
+        path: "/categorysDetail/:id",
+        component: CategorysDetail
     },
     //  专题
     {
@@ -79,12 +90,5 @@ const route = [
         ]
     }
 ]
-// const route = [
-//     {
-//         path:"/specialtopic/:id",
-//         component:SpecialDetail
-//     },
 
-
-// ]
 export default route;

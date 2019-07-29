@@ -1,0 +1,192 @@
+.goodsPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+
+    .goodsMain {
+        flex: 1;
+        background: #eee;
+        overflow: auto;
+        .slider {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            visibility: visible;
+            background: #ccc;
+
+            .swiper-container {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .topGoodsItem {
+                            img {
+                                width: 100%;
+                                height: 5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .serviceList {
+            width: 100%;
+            height: 1rem;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            li{
+                flex: 1;
+                text-align: center;
+                font-size: 0.3rem;
+                span{
+                    color:#f00;
+                }
+            }
+        }
+
+        .goodsMsgWrap {
+            padding: .4rem;
+            background: #fff;
+            border-bottom: .02rem solid #ccc;
+
+            .goodsNameTitle {
+                font-size: .4rem;
+                text-align: center;
+                padding-bottom: .2rem;
+            }
+
+            .goodsNameSubTitle {
+                font-size: .3rem;
+                color: #444;
+                text-align: center;
+                padding-bottom: .1rem;
+            }
+
+            .goodsPriceTitle {
+                font-size: .4rem;
+                color: red;
+                text-align: center;
+                line-height: 1rem;
+            }
+        }
+
+        .goodsSize {
+            display: flex;
+            align-items: center;
+
+            &>div:first-child {
+                flex: 1 1;
+                text-align: left;
+                color: #2196f3;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            &>div:nth-child(2) {
+                width: auto;
+                padding: 0 .1rem;
+                text-align: right;
+                color: red;
+                font-weight: bolder;
+            }
+
+            div:nth-child(3) {
+                width: auto;
+                padding: 0 .1rem;
+                text-align: right;
+            }
+
+            display: flex;
+            margin-top: .02rem;
+            height: 1rem;
+            padding: 0 .4rem;
+
+        }
+
+        .goodsAttribute {
+            margin-top: .2rem;
+            padding: .4rem;
+            background: #fff;
+
+            .goodsAttributeLine {
+                display: flex;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-align-items: center;
+                align-items: center;
+                color: #2196f3;
+                padding: .1rem 0;
+            }
+
+            .goodsAttributeLine:before {
+                content: "";
+                width: .4rem;
+                height: 1px;
+                background: #2196f3;
+                margin: 0 .2rem;
+            }
+
+            .goodsAttributeLine:after {
+                content: "";
+                width: .4rem;
+                height: 1px;
+                background: #2196f3;
+                margin: 0 .2rem;
+            }
+
+            .goodsAttributeList {
+
+                // padding: 0.1rem;
+                .goodsAttributeItem {
+                    background: #ccc;
+                    display: flex;
+                    align-items: center;
+                    line-height: .8rem;
+                    background: #dcdfe6;
+                    margin-top: .1rem;
+
+                    .attributeLabel {
+                        width: 2rem;
+                        color: grey;
+                        padding: 0 .1rem;
+                        font-size: .32rem;
+                        text-align: center;
+                    }
+
+                    .attributeContent {
+                        flex: 1 1;
+                        font-size: .3rem;
+                        line-height: .6rem;
+                        padding: 0 .1rem;
+                    }
+                }
+            }
+        }
+        
+        .topicDetailImg{
+            border:0;
+            
+            p{
+                // margin-bottom:0;
+                img{
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+        }
+    
+}
+
+// .goodsPageDo{
+//  width: 100%;
+
+// }
+
+}

@@ -1,3 +1,66 @@
+# mobx
+网易严选
+
+​EasyMarket 是仿网易严选 UI 设计的 H5 webApp。项目是基于 React+Redux+mobx（修饰器）+Axios+React-router。 ​
+
+###网易严选App
+###EasyMrket 本地部署
+根据搭建好的服务器进行数据请求（本地Ip:8888/）
+
+###项目说明
+本项目的主要目的是阐述多端开发思路、技巧，力求直观、方便阅读，因此是在 taro init 的基础上开发的，没有去做太多封装。诸如是用 Redux 还是 Mobx，网络请求怎么封装比较完美并不是本项目的重点。
+
+# 安装依赖，
+cnpm i
+yarn
+
+###功能点
+计划实现页面
+ 首页   cateDetail的跳详情 奇趣分类 再跳详情  
+
+ 频道页面（选取一个即可）
+ 识物
+ 分类
+ 购物车
+ 个人信息
+ 商品列表
+ 商品详情
+ 用户评论
+ 新人专享列表
+ 搜索页面
+
+# mobx
+网易严选
+
+​EasyMarket 是仿网易严选 UI 设计的 H5 webApp。项目是基于 React+Redux+mobx（修饰器）+Axios+React-router。 ​
+
+###网易严选App
+###EasyMrket 本地部署
+根据搭建好的服务器进行数据请求（本地Ip:8888/）
+
+###项目说明
+本项目的主要目的是阐述多端开发思路、技巧，力求直观、方便阅读，因此是在 taro init 的基础上开发的，没有去做太多封装。诸如是用 Redux 还是 Mobx，网络请求怎么封装比较完美并不是本项目的重点。
+
+# 安装依赖，
+cnpm i
+yarn
+
+###功能点
+计划实现页面
+ 首页
+ 频道页面（选取一个即可）
+ 识物
+ 分类
+ 购物车
+ 个人信息
+ 商品列表
+ 商品详情
+ 用户评论
+ 新人专享列表
+ 搜索页面
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +129,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+

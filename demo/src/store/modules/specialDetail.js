@@ -1,5 +1,5 @@
 import { observable, action } from "mobx";
-import { getSpecialDetail } from '../../serviers/specialDetail'
+import { getSpecialDetail } from '../../services/specialDetail'
 
 export default class SpecialDetail {
     // @observable 修饰属性

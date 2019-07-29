@@ -1,5 +1,5 @@
 import { observable, action } from "mobx";
-import {getclassifyHead} from '../../serviers/classifyhead'
+import {getclassifyHead} from '../../services/classifyhead'
 
 export default class ClassifyHead{
     // @observable 修饰属性

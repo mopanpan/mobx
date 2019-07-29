@@ -1,5 +1,8 @@
 import { observable, action } from "mobx";
-import {getClassify,monet,getClassifyList} from '../../serviers/classify'
+
+
+import {getClassify,monet,getClassifyList} from '../../services/classify'
+
 
 export default class Classify{
     // @observable 修饰属性
