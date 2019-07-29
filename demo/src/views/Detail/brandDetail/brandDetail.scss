@@ -1,0 +1,29 @@
+.brand {
+    min-height: 100%;
+
+    .brands {
+        background: #eee;
+        width: 100%;
+        height: 100%;
+
+        .brandDetail {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .breadDesc {
+                width: 100%;
+                line-height: .4rem;
+                padding: .4rem;
+                background: #fff;
+                text-indent: .6rem; // 2em
+                color: grey;
+            }
+        }
+
+        .brandGoodsList {
+            background: pink;
+        }
+    }
+}
