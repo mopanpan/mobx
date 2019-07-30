@@ -92,6 +92,16 @@ const SpecialDetail = Loadable({
     loader:()=>import('../views/RouteDetail/SpecialDetail/index'),
     loading:Loading
 })
+//模糊搜索
+const SearchDetail = Loadable({
+    loader:()=>import('../views/Detail/SearchDetail/searchdetail'),
+    loading:Loading
+})
+//模糊详情
+const newDetail = Loadable({
+    loader:()=>import('../views/Detail/newDetail/newdetail'),
+    loading:Loading
+})
 
 
 const route = [
@@ -131,6 +141,14 @@ const route = [
     {
         path: "/specialtopic/:id",
         component: SpecialDetail
+    },
+    {
+        path: "/SearchDetail",
+        component: SearchDetail
+    },
+    {
+        path: "/newDetail/:id",
+        component: newDetail
     },
     {
         path: "/",

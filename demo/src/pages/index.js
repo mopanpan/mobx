@@ -10,11 +10,12 @@ import './font/iconfont.css';
 class Index extends Component {
   componentDidMount() {
     console.log('home componentDidMount')
+    //出现loading效果
     // this.props.loading.isLoading();
 
-    setInterval(() => {
-      this.props.loading.changeLoading(!this.props.loading.isLoading);
-    }, 2000);
+    // setInterval(() => {
+    //   this.props.loading.changeLoading(!this.props.loading.isLoading);
+    // }, 2000);
 
   }
 
