@@ -6,17 +6,24 @@ import CartFooter from '../../../components/cartFooter/cartFooter.js'
 import Swiper from 'swiper';
 import '../../../../node_modules/swiper/dist/css/swiper.css';
 import '../../../pages/font/iconfont.css'
-
+import { Link } from 'react-router-dom'
 
 @inject("brandDetail")  //  监听的函数
 //响应observable,state值变化，视图中的observable 及computed数据会同步变化
 @observer
 class NewGoodsDetail extends Component {
+  state = {
+      flag:false
+  }
 
   componentDidMount() {
     this.props.brandDetail.getProDetail({
       id: this.props.match.params.id
     });
+    // relate 获取相关商品的id
+    this.props.brandDetail.getRelateProData({
+      id: this.props.match.params.id
+    })
     this.swiper = new Swiper(this.swiper, {
       autoplay: true,
       observer: true,//修改swiper自己或子元素时，自动初始化swiper
@@ -31,17 +38,21 @@ class NewGoodsDetail extends Component {
   }
 
   render() {
+    let {flag} = this.state;
     console.log(this.props)
     console.log(this.props.brandDetail.proDetail)
     console.log(this.props.brandDetail.proDetail.info)
-    let { info, gallery, attribute } = this.props.brandDetail.proDetail;
+    let { info, gallery, attribute, issue } = this.props.brandDetail.proDetail;
     console.log(info);
+    let { goodsList } = this.props.brandDetail.relatePro;
+    console.log(goodsList);
+  
     return (
       <div className="goodsPage">
         <Header title={info && info.name} />
-        {/* <div>{info && info.name}</div> */}
+
         <div className="goodsMain">
-          {gallery ? <div className="slider">
+          { gallery ? <div className="slider">
             <div className="swiper-container" ref={swiper => { this.swiper = swiper }}>
               <div className="swiper-wrapper">
                 {
@@ -57,8 +68,8 @@ class NewGoodsDetail extends Component {
               {/* <!--分页器。如果放置在swiper-container外面，需要自定义样式。--> */}
               <div className="swiper-pagination"></div>
             </div>
-          </div> : <div className="slider">
-
+          </div> : <div className="sliders">
+              9090909
             </div>}
 
           <div className="serviceList">
@@ -104,20 +115,50 @@ class NewGoodsDetail extends Component {
             </div>
           </div>
 
-          <div className="topicDetailImg" dangerouslySetInnerHTML={{ __html:this.props.brandDetail.proDetail.info && this.props.brandDetail.proDetail.info.goods_desc}}>
+          <div className="topicDetailImg" dangerouslySetInnerHTML={{ __html: this.props.brandDetail.proDetail.info && this.props.brandDetail.proDetail.info.goods_desc }}>
           </div>
 
           <div className="goodsAttribute">
             <div className="goodsAttributeLine">常见问题</div>
-            <div className="problemWrap"></div>
+            {
+              issue && issue.map(item => (
+                <div className="problemWrap" key={item.id}>
+                  <div className="problemLabel">
+                    <span>√</span>
+                    {item.question}
+                  </div>
+                  <div className="problemContent">{item.answer}</div>
+                </div>
+              ))
+            }
           </div>
-          <div className="goodsAttributes"></div>
-          <div className="goodsList"></div>
+
+          {/* 大家都在看 */}
+          <div className="goodsAttribute">
+            <div className="goodsAttributeLine">大家都在看</div>
+          </div>
+
+          <div className="aaa">
+            <div className="bbb">
+              {
+                goodsList && goodsList.map(item => (
+                  <Link to={`/newGoodsDetail/${item.id}`} className="goodsItem" key={item.id}>
+                    {/* <Header title={item.name} /> */}
+                    <div className="goodsItemImg">
+                      <img src={item.list_pic_url} alt="" />
+                    </div>
+                    <div className="goodsItemName">{item.name}</div>
+                    <div className="goodsItemPrice">￥{item.retail_price}</div>
+                  </Link>
+                ))
+              }
+            </div>
+          </div>
+
         </div>
 
-        {/* <div className="goodsPageDos"> */}
         <CartFooter />
-        {/* </div> */}
+
       </div>
     )
   }

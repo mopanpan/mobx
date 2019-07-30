@@ -14,4 +14,8 @@ export function productDetails(params) { //
   return request.get('/goods/detail',{params});  
 }
 
+// 相关商品
+export function relatedProducts(params){
+  return request.get('/goods/related',{params});
+}
 

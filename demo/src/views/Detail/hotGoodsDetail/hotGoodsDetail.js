@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import styles from './hotGoodsDetail.module.scss';
 
-export class hotGoodsDetail extends Component {
+class hotGoodsDetail extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.hotGoodsDetail}>
           人气推荐详情
+          
       </div>
     )
   }
