@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Classify.scss'
 import { inject, observer } from 'mobx-react';
-@inject('classify','classifyList')
+@inject('classify','classifyList','classifyhead')
 @observer
 
 class Classify extends Component {
@@ -10,29 +10,33 @@ class Classify extends Component {
   }
 
   clickDl=(item)=>{
-    
-    console.log(item,'111')
+    // console.log(item)
     this.props.classifyList.getDataList(item)
     this.props.history.push(`/cateDetail/${item.id}`)
   }
+
+  toSearch=()=>{
+    this.props.history.push('/SearchDetail')
+   
+  }
+
   componentDidMount() {
     this.props.classify.moneths()
-  // this.props.classifyhead.getDataClassifyHead()
-   
+    this.props.classifyhead.getDataClassifyHead()
   }
 
   render() {
     let { RightData } = this.state
-      //console.log(this.props.classifyhead.data.defaultKeyword)//获取件数
-      console.log(this.props,'555')
+      // console.log(this.props.classifyhead.data,'count')//获取件数
+      // console.log(this.props,'555')
 
 
 
     return (
       <div className="ClassifyPage">
         <div className="header">
-          <p>
-            <input type="text" placeholder="搜索商品，公1111件好物" />
+          <p onClick={this.toSearch}>
+            {`搜索商品，共${this.props.classifyhead.data}件好物`}
           </p>
         </div>
         <div className="ClassiySec">
@@ -43,7 +47,7 @@ class Classify extends Component {
                return  <li key={item.id} onClick={() => {
                     this.props.classify.getDataClassify(item.id); {
                       RightData = this.props.classify
-                      console.log(RightData)
+                      // console.log(RightData)
                     }
                 }}>{item.name}</li>
               })

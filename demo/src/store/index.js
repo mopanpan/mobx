@@ -9,7 +9,7 @@ import SpecialDetail from './modules/specialDetail'//专题详情
 import SpecialDetailList from './modules/specialDetailList'//专题详情评论
 import ClassifyHead from './modules/classifyhead'//头部总数
 import ClassifyList from './modules/classify'//点dl跳详情
-
+import SearchHelper from './modules/searchHelper'//搜索页
 
 
 // 实例化模块
@@ -26,6 +26,7 @@ const specialDetail = new SpecialDetail();
 const specialDetailList = new SpecialDetailList();
 const classifyhead = new ClassifyHead();//还没做
 const classifyList = new ClassifyList();
+const searchHelper = new SearchHelper();
 
 export default{
     home,
@@ -37,7 +38,7 @@ export default{
 
     classifyhead,
     classifyList,
-
+    searchHelper,
     brandDetail
 
 }

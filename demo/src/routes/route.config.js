@@ -16,8 +16,8 @@ import projectSelDetail from '../views/Detail/projectSelDetail/projectSelDetail.
 import GoodsDetail from '../views/Detail/goods/goodsDetail' //商品详情
 import CategorysDetail from '../views/Detail/CategorysDetail/categorysDetail' //更多居家详情
 
-
-
+import SearchDetail from '../views/Detail/SearchDetail/searchdetail' //搜索详情
+import NewDetail from '../views/Detail/newDetail/newdetail'//有排序的详情
 //专题
 import SpecialDetail from '../views/RouteDetail/SpecialDetail/index'
 
@@ -53,6 +53,14 @@ const route = [
     {
         path: "/categorysDetail/:id",
         component: CategorysDetail
+    },
+    {
+        path: "/searchDetail",
+        component: SearchDetail
+    },
+    {
+        path: "/newDetail/:keyword",
+        component: NewDetail
     },
     //  专题
     {

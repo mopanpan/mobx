@@ -30,12 +30,12 @@ class CateDetail extends Component {
     })
 
     this.props.livHomeDetail.getManufacturer(this.state.ind+1)
-   console.log(this.props.classifyList,'2222222222222')
   }
 
   //  点击导航
   // clickNav({index,id,page}){
   clickNav(index,{id,page}){
+    console.log({id},'id')
     // console.log(index+1)
     // console.log({id});
     // if(this.state.currentCategoryid! ===id){
@@ -49,6 +49,8 @@ class CateDetail extends Component {
       categoryId:id,page:1,size:1000
      })
 
+   
+
     // this.getBottomData({id})
   }
 
@@ -61,7 +63,7 @@ class CateDetail extends Component {
 
   render() {
     let { ind } = this.state;
-    console.log(this.props)
+    console.log(this.props.classifyList.dataList.filterCategory,'68')
     console.log(this.props.livHomeDetail.navDetail.brotherCategory);
     console.log(this.props.livHomeDetail.navDetail.currentCategory);
     let { brotherCategory, currentCategory } = this.props.livHomeDetail.navDetail;

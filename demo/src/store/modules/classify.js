@@ -23,7 +23,7 @@ export default class Classify{
     }
 
     @action getDataList(type){
-        console.log(type)
+        console.log(type,'444444')
         getClassifyList(type).then((data)=>{
           console.log(data)
             this.dataList=data.data
