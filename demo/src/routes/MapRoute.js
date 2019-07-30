@@ -9,7 +9,9 @@ const MapRoute =props=>(
          <Route 
           key={Item.path}
           path={Item.path} 
-          render={props=><Item.component {...props} route={Item.children}></Item.component>} />)  
+          render={props=><Item.component {...props} route={Item.children}>
+           
+          </Item.component>} />)  
           :<Redirect {...Item} key={Item.from} />
         )
        )
@@ -18,6 +20,9 @@ const MapRoute =props=>(
 )
 
 export default MapRoute;
+ // 判断是否登陆
+ // return <Redirect to="/login" />
+
 
 // route.config.js 默认抛出的没有名字
 // const MapRoute =(props)=>(
