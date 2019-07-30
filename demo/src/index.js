@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './App.js'
 
+
 //引入mobx
 import { Provider } from 'mobx-react'
 import store from './store/index.js'
@@ -11,6 +12,8 @@ import store from './store/index.js'
 var FastClick = require('fastclick');
 FastClick.attach(document.body);
 
-ReactDOM.render(<Provider {...store}><App /></Provider>,document.getElementById('root'));
+ReactDOM.render(<Provider {...store}>
+        <App />
+</Provider>, document.getElementById('root'));
 
 
