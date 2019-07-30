@@ -1,16 +1,28 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-// import styles from './index.scss';
+import { observer, inject } from 'mobx-react'
 import { MapRoute } from '../routes/index'
 import './global.scss';
-import './font/iconfont.css'
-export class Index extends Component {
+import './font/iconfont.css';
+
+@inject('loading')
+@observer
+class Index extends Component {
+  componentDidMount() {
+    console.log('home componentDidMount')
+    // this.props.loading.isLoading();
+
+    setInterval(() => {
+      this.props.loading.changeLoading(!this.props.loading.isLoading);
+    }, 2000);
+
+  }
+
   render() {
     return (
       <>
         <div className="main">
           <MapRoute route={this.props.route}></MapRoute>
-
         </div>
         <ul className="footer">
           <li><NavLink to="/home"><i className="iconfont icon-shouye"></i>首页</NavLink></li>

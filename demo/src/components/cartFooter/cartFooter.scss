@@ -9,13 +9,25 @@
     display: flex;
     align-items: center;
 
-    .isLike {
+    // .isLike
+    >div:nth-child(1) {
         width: 20%;
         height: 100%;
         line-height: .98rem;
         font-size: .6rem;
         text-align: center;
         font-weight: bolder;
+    }
+    .nolike:before,.like:after{
+        // color: gold;
+        // content:"★";
+    }
+    .nolike:before{
+       content: '☆';
+    }
+    .like:before{
+        content:"★";
+        color:gold;
     }
 
     .cartNum {
@@ -66,3 +78,15 @@
         background: linear-gradient(90deg, #1d62f0, #19d5fd);
     }
 }
+
+
+// .down:after,.up:after{
+//     display: inline-block;
+//     vertical-align: middle;
+// }
+// .down:after{
+//     content:'\1F447'
+// }
+// .up:after{
+//     content:'\1F446'
+// }

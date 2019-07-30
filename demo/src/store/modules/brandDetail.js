@@ -1,11 +1,11 @@
 import { observable, action } from "mobx";
-import { brandDetail, productDetails } from '../../services/index.js'
+import { brandDetail, productDetails, relatedProducts } from '../../services/index.js'
 
  class BrandDetail {
     // @observable 修饰属性
     @observable branDetail = [];
     @observable proDetail = [];
-    
+    @observable relatePro = [];
     // @action 修饰方法
     @action getDataDetail = async(params)=>{
       //  console.log(params)
@@ -17,6 +17,11 @@ import { brandDetail, productDetails } from '../../services/index.js'
        let res = await productDetails(params);
        console.log('production',res)
        this.proDetail = res.data;
+    }
+    @action getRelateProData = async(params)=>{
+       let res = await relatedProducts(params);
+       console.log('getRelateProData',res);
+       this.relatePro = res.data;
     }
 }
 
