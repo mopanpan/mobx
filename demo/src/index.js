@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App.js'
-
+import App from './App.js';
+import 'antd/dist/antd.css';
 
 //引入mobx
 import { Provider } from 'mobx-react'

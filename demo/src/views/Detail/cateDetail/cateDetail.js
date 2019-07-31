@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom'
 import './cateDetail.scss'
 import Header from '../../../components/Header/Header.js';
 import { Tabs, WhiteSpace } from 'antd-mobile'; // eslint-disable-line
-@inject('livHomeDetail')
+// @inject('livHomeDetail')
+
+@inject('livHomeDetail','classifyList')
 @observer
 class CateDetail extends Component {
   state = {
@@ -14,6 +16,7 @@ class CateDetail extends Component {
   }
 
   componentDidMount() {
+
     this.props.livHomeDetail.getNavDetailData({
       id: this.props.match.params.id
     });
@@ -31,6 +34,11 @@ class CateDetail extends Component {
       page: 1
     })
 
+    this.props.classifyList.getDataList()//商品ID
+
+   
+
+    // this.props.livHomeDetail.getManufacturer(this.state.ind+1)
   }
 
   //  点击导航
@@ -67,6 +75,8 @@ class CateDetail extends Component {
     // ];
     // let { ind } = this.state;
     console.log(this.props)
+    // let { ind } = this.state;
+    console.log(this.props.classifyList.dataList.filterCategory,'68')
     console.log(this.props.livHomeDetail.navDetail.brotherCategory);
     console.log(this.props.livHomeDetail.navDetail.currentCategory);
     let { brotherCategory, currentCategory } = this.props.livHomeDetail.navDetail;
@@ -78,6 +88,9 @@ class CateDetail extends Component {
     console.log(tabs)
     let { goodsList } = this.props.livHomeDetail.manufacturers;
     console.log(goodsList)
+    // console.log(currentCategory.name);
+    // let {goodsList} = this.props.livHomeDetail.manufacturers;
+    // console.log(goodsList,'5')
     return (
       <div className="tabPageContent">
         <Header title={this.state.headTitle} />
@@ -135,7 +148,8 @@ class CateDetail extends Component {
   }
 }
 
-export default CateDetail
+export default CateDetail;
+
 // {
 //   categoryList && categoryList.map(item => (
 //      <div className="categoryDetail" key={item.id}>

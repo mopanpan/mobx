@@ -8,7 +8,7 @@ export default class ClassifyHead{
     @action getDataClassifyHead(){
         getclassifyHead().then((data)=>{
              console.log(data)
-            this.data=data.data
+            this.data=data.data.goodsCount
         })
     }
 }

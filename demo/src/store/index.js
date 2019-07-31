@@ -1,5 +1,6 @@
 // 引入模块
 // 首页
+import Login from './modules/login';
 import Loading from './modules/loading.js'
 import Home from './modules/home.js';
 import Classify from './modules/classify.js';
@@ -12,6 +13,8 @@ import SpecialDetail from './modules/specialDetail'//专题详情
 import SpecialDetailList from './modules/specialDetailList'//专题详情评论
 import ClassifyHead from './modules/classifyhead'//头部总数
 import ClassifyList from './modules/classify'//点dl跳详情
+import SearchHelper from './modules/searchHelper'//搜索页
+import Collection from './modules/collection.js';//我的收藏
 
 
 // 实例化模块
@@ -21,16 +24,20 @@ const home = new Home();
 const classify = new Classify();
 const livHomeDetail = new LivHomeDetail();
 const brandDetail = new BrandDetail()
+const login=new Login()
 
 
 // 专题实例化
 const specialTopic = new SpecialTopic();
 const specialDetail = new SpecialDetail();
 const specialDetailList = new SpecialDetailList();
-const classifyhead = new ClassifyHead();//还没做
+const classifyhead = new ClassifyHead();
 const classifyList = new ClassifyList();
+const searchHelper = new SearchHelper();
+const collection=new Collection()
 
 export default{
+    login,
     loading,
     home,
     classify,
@@ -38,10 +45,10 @@ export default{
     specialDetail,
     livHomeDetail,
     specialDetailList,
-
+    collection,
     classifyhead,
     classifyList,
-
+    searchHelper,
     brandDetail
 
 }
