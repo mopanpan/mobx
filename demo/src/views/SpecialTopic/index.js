@@ -1,37 +1,37 @@
-import React,{Component } from 'react'
+import React, { Component } from 'react'
 import './index.scss'
-import {inject, observer} from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 @inject('specialTopic')
 @observer
 
-class SpecialTopic extends Component{
-    SpecialDetail=(item)=>{
+class SpecialTopic extends Component {
+    SpecialDetail = (item) => {
         // console.log(item)
-     this.props.history.push(`/specialtopic/${item.id}`)
+        this.props.history.push(`/specialtopic/${item.id}`)
     }
-    componentDidMount(){
+    componentDidMount() {
         this.props.specialTopic.getData()
     }
     render() {
-         // console.log('props...', this.props.specialTopic.data);
+        // console.log('props...', this.props.specialTopic.data);
         return (
             <div className="SpecialTopic">
-               {
-                   this.props.specialTopic.data&&this.props.specialTopic.data.map((item,index)=>(
-                       <div key={item.id} className="BigBox" onClick={()=>this.SpecialDetail(item)}>
-                         <div className="ImgBox">
-                           <img src={item.scene_pic_url} alt=""/>
-                       </div>
-                       <div className="TitleBox">
-                           <p>{item.title}</p>
-                           <p style={{color:'#ccc'}}>{item.subtitle}</p>
-                           <p style={{color:'#f00'}}>{item.price_info}元起</p>
-                       </div>
+                {
+                    this.props.specialTopic.data && this.props.specialTopic.data.map((item, index) => (
+                        <div key={item.id} className="BigBox" onClick={() => this.SpecialDetail(item)}>
+                            <div className="ImgBox">
+                                <img src={item.scene_pic_url} alt="" />
+                            </div>
+                            <div className="TitleBox">
+                                <p>{item.title}</p>
+                                <p style={{ color: '#ccc' }}>{item.subtitle}</p>
+                                <p style={{ color: '#f00' }}>{item.price_info}元起</p>
+                            </div>
 
-                       </div>
-                      
-                   ))
-               }
+                        </div>
+
+                    ))
+                }
             </div>
         )
     }

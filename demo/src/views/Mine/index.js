@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import './Mine.scss';
 import '@/pages/font/iconfont.css';
-import {Toast} from 'antd-mobile'
+import { Toast } from 'antd-mobile'
 import { inject, observer } from 'mobx-react';
 @inject('collection')
 @observer
 class Mine extends Component {
-   state = {
+  state = {
     userPower: [
       {
         icon: 'icon-shoucang',
@@ -61,54 +61,54 @@ class Mine extends Component {
     ]
 
   }
-  
 
-  showPower (item) {
-    console.log(item)
-    if('link' in item){
+
+  showPower(item) {
+    // console.log(item)
+    if ('link' in item) {
       this.props.history.push(item.link)
-    
+
     } else {
-      Toast.offline(`${item.name}功能还未解锁，请耐心等候~`,1)
+      Toast.offline(`${item.name}功能还未解锁，请耐心等候~`, 1)
     }
   }
-  loginOut () {
+  loginOut() {
     // this.props.actions.loginFailure()
     this.props.history.goBack('/home')
     window.localStorage.removeItem('token')
     window.localStorage.removeItem('nideShopUser')
   }
   render() {
-    console.log(this.props,'111')
+    // console.log(this.props,'111')
     const userPhone = window.localStorage.getItem('nideShopUser')
     return (
       <div id="minePage">
-      <div className="userMsgWrap">
-        <div className="userLogo"></div>
-        {
-          userPhone?
-            <div className="userMsgs">
-              <div>{userPhone}</div>
-              <div>普通用户</div>
-            </div>:
-            <div className="userMsgs">
-              <div style={{height: '100%'}}>未登录</div>
-            </div>
-        }
-      </div>
-      <div className="userPower">
-        {
-          this.state.userPower.map((item) => (
-            <div key={item.name} onClick={this.showPower.bind(this,item)} style={'link' in item?{color:'#2196f3'}:{}}>
-              <i className={`iconfont ${item.icon}`} style={'link' in item?{color:'#2196f3'}:{}}></i>
-              <div>{item.name}</div>
-            </div>)
-          )
-        }
-      </div>
+        <div className="userMsgWrap">
+          <div className="userLogo"></div>
+          {
+            userPhone ?
+              <div className="userMsgs">
+                <div>{userPhone}</div>
+                <div>普通用户</div>
+              </div> :
+              <div className="userMsgs">
+                <div style={{ height: '100%' }}>未登录</div>
+              </div>
+          }
+        </div>
+        <div className="userPower">
+          {
+            this.state.userPower.map((item) => (
+              <div key={item.name} onClick={this.showPower.bind(this, item)} style={'link' in item ? { color: '#2196f3' } : {}}>
+                <i className={`iconfont ${item.icon}`} style={'link' in item ? { color: '#2196f3' } : {}}></i>
+                <div>{item.name}</div>
+              </div>)
+            )
+          }
+        </div>
 
-      <div className="loginOut" onClick={this.loginOut.bind(this)}>退出登录</div>
-    </div>
+        <div className="loginOut" onClick={this.loginOut.bind(this)}>退出登录</div>
+      </div>
     )
   }
 }

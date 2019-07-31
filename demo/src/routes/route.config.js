@@ -107,6 +107,10 @@ const Collection = Loadable({
     loader:()=>import('../views/Detail/Collection/Collection'),
     loading:Loading
 })
+const CollectionDetail = Loadable({
+    loader:()=>import('../views/Detail/CollectionDetail/CollectionDetail'),
+    loading:Loading
+})
 
 
 const route = [
@@ -143,8 +147,8 @@ const route = [
         component: CategorysDetail
     },
     // 专题
-<<<<<<< HEAD
-=======
+
+
     {
         path: "/specialtopic/:id",
         component: SpecialDetail
@@ -157,11 +161,17 @@ const route = [
         path: "/newDetail/:id",
         component: newDetail
     },
->>>>>>> mp
     {
         path: "/collect",
         component: Collection
     },
+    {
+        path: "/collectDetail/:id",
+        component: CollectionDetail
+    },
+
+
+    
     {
         path: "/",
         component: Index,
