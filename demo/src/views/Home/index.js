@@ -5,17 +5,19 @@ import { Link } from 'react-router-dom';
 import Swiper from 'swiper';
 import '../../../node_modules/swiper/dist/css/swiper.css';
 // import BScroll from 'better-scroll';
-
+import Loading from '../../components/Loading/Loading.js' // eslint-disable-line
 
 @inject("home")
 //响应observable,state值变化，视图中的observable 及computed数据会同步变化
 @observer
-class Home extends Component {
+class Home extends Component { 
     componentDidMount() {
+        
+
         this.props.home.getHomeData();
 
         this.banner = new Swiper(this.swp, {
-            autoplay: true,
+            // autoplay: true,
             observer: true,//修改swiper自己或子元素时，自动初始化swiper
             observeParents: true,//修改swiper的父元素时，自动初始化swiper
         })

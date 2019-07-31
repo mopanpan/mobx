@@ -12,9 +12,9 @@ class Index extends Component {
     console.log('home componentDidMount')
     // this.props.loading.isLoading();
 
-    setInterval(() => {
-      this.props.loading.changeLoading(!this.props.loading.isLoading);
-    }, 2000);
+    // setInterval(() => {
+    //   this.props.loading.changeLoading(!this.props.loading.isLoading);
+    // }, 2000);
 
   }
 
