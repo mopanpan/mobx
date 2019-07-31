@@ -50,7 +50,7 @@ class SearchHelper extends Component {
                   <div className="searchSec">
                       <div className="searchShow" >
                             <div className="searchTop">
-                                <p><span>历史纪录</span><i className="iconfont icon-shanchu" onClick={this.deleteTa}></i></p>
+                                <p><span>历史纪录</span><i className="iconfont changyonggoupiaorenshanchu" onClick={this.deleteTa}></i></p>
                                 <div className="historyNum">
                                 {
                                     this.props.searchHelper.data.historyKeywordList&&this.props.searchHelper.data.historyKeywordList.map((item,index)=>(

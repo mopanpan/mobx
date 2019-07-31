@@ -102,6 +102,11 @@ const newDetail = Loadable({
     loader:()=>import('../views/Detail/newDetail/newdetail'),
     loading:Loading
 })
+//我的收藏
+const Collection = Loadable({
+    loader:()=>import('../views/Detail/Collection/Collection'),
+    loading:Loading
+})
 
 
 const route = [
@@ -149,6 +154,10 @@ const route = [
     {
         path: "/newDetail/:id",
         component: newDetail
+    },
+    {
+        path: "/collect",
+        component: Collection
     },
     {
         path: "/",

@@ -1,39 +1,114 @@
 import React, { Component } from 'react'
 import './Mine.scss';
 import '@/pages/font/iconfont.css';
+import {Toast} from 'antd-mobile'
+import { inject, observer } from 'mobx-react';
+@inject('collection')
+@observer
 class Mine extends Component {
-  render() {
-    return (
-     
-        <div className="tabPageContent">
-          <div id="minePage">
-            <div className="userMsgWrap">
-              <div className="userLogo">
+   state = {
+    userPower: [
+      {
+        icon: 'icon-shoucang',
+        name: '我的收藏',
+        link: '/collect'
+      },
+      {
+        icon: 'icon-cart',
+        name: '地址管理',
+        link: '/address'
+      },
+      {
+        icon: 'icon-dingdan',
+        name: '我的订单'
+      },
+      {
+        icon: 'icon-all',
+        name: '周末拼单'
+      },
+      {
+        icon: 'icon-youhuiquan',
+        name: '优惠券'
+      },
+      {
+        icon: 'icon-car',
+        name: '优选购'
+      },
+      {
+        icon: 'icon-form',
+        name: '我的红包'
+      },
+      {
+        icon: 'icon-huiyuan',
+        name: '会员plus'
+      },
+      {
+        icon: 'icon-wode',
+        name: '邀请返利'
+      },
+      {
+        icon: 'icon-qrcode',
+        name: '意见反馈'
+      },
+      {
+        icon: 'icon-kefu',
+        name: '客服咨询'
+      },
+      {
+        icon: 'icon-email',
+        name: '账户安全'
+      }
+    ]
 
-              </div>
-              <div className="userMsgs">
-                <div>15323807318</div>
-                <div>普通用户</div></div></div>
-            <div className="userPower">
-      <div style={{color:'#00f'}}><i className="iconfont icon-shoucang" style={{color: '#00f'}}></i>
-                <div>我的收藏</div></div>
-              <div style={{color: '#00f'}}>
-                <i className="iconfont icon-iconfontdizhi" style={{color:'#00f'}}></i>
-                <div>地址管理</div></div>
-              <div><i className="iconfont icon-order"></i><div>我的订单</div></div>
-              <div><i className="iconfont icon-rili"></i><div>周末拼单</div></div>
-              <div><i className="iconfont icon-youhuiquan"></i><div>优惠券</div></div>
-              <div><i className="iconfont icon-youxuan"></i><div>优选购</div></div>
-              <div><i className="iconfont icon-hongbao"></i><div>我的红包</div></div>
-              <div><i className="iconfont icon-huiyuan"></i><div>会员plus</div></div>
-              <div><i className="iconfont icon-yaoqing"></i><div>邀请返利</div></div>
-              <div><i className="iconfont icon-yijianfankui"></i><div>意见反馈</div></div>
-              <div><i className="iconfont icon-kefu"></i><div>客服咨询</div></div>
-              <div><i className="iconfont icon-baohu"></i><div>账户安全</div></div></div>
-            <div className="loginOut">退出登录</div>
-          </div>
-        </div>
-      
+  }
+  
+
+  showPower (item) {
+    console.log(item)
+    if('link' in item){
+      this.props.history.push(item.link)
+    
+    } else {
+      Toast.offline(`${item.name}功能还未解锁，请耐心等候~`,1)
+    }
+  }
+  loginOut () {
+    // this.props.actions.loginFailure()
+    this.props.history.goBack('/home')
+    window.localStorage.removeItem('token')
+    window.localStorage.removeItem('nideShopUser')
+  }
+  render() {
+    console.log(this.props,'111')
+    const userPhone = window.localStorage.getItem('nideShopUser')
+    return (
+      <div id="minePage">
+      <div className="userMsgWrap">
+        <div className="userLogo"></div>
+        {
+          userPhone?
+            <div className="userMsgs">
+              <div>{userPhone}</div>
+              <div>普通用户</div>
+            </div>:
+            <div className="userMsgs">
+              <div style={{height: '100%'}}>未登录</div>
+            </div>
+        }
+      </div>
+      <div className="userPower">
+        {
+          this.state.userPower.map((item) => (
+            <div key={item.name} onClick={this.showPower.bind(this,item)} style={'link' in item?{color:'#2196f3'}:{}}>
+              <i className={`iconfont ${item.icon}`} style={'link' in item?{color:'#2196f3'}:{}}></i>
+              <div>{item.name}</div>
+            </div>)
+          )
+        }
+      </div>
+
+      <div className="loginOut" onClick={this.loginOut.bind(this)}>退出登录</div>
+    </div>
     )
   }
 }
