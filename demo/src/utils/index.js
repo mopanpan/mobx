@@ -1,22 +1,14 @@
-import Cookie from 'js-cookie';
-const key = 'authorization'; //authorization
-// 设置cookie
-
-// 存cookie,过期时间为十个小时  控制时间
-export function setToken(val){ // export 抛出  使用需要解构
-    let date = new Date();
-    // console.log('============',date)
-    let expires = date.getTime() + 10*60*60*1000;// 设置毫秒数
-    date.setTime(expires)//  设置现在的时间
-    Cookie.set(key,val,{expires:date})
+const key = 'x-nideshop-token'
+// 设置cookie, 过期时间为十个小时
+export function setToken(val){
+  console.log(val)
+  window.localStorage.setItem(key,val)
 }
-
 // 读取cookie
-export function getToken() {
-    return Cookie.get(key);
+export function getToken(){
+ return  window.localStorage.getItem(key) 
 }
-
 // 删除cookie
-export function removeToken() {
-    Cookie.remove(key);
+export function removeToken(){
+    window.localStorage.removeItem(key)
 }
