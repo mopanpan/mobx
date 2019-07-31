@@ -84,4 +84,5 @@ class SpecialDetail extends Component {
     }
 }
 
+
 export default SpecialDetail;

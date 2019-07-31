@@ -1,0 +1,128 @@
+.projectSelDetail {
+    width: 100%;
+
+    // height: 2rem;
+    // background: red;
+    .topicDetailImg {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+
+        }
+    }
+
+    .commentWrap {
+        width: 100%;
+        height: auto;
+        background: #fff;
+        margin-top: .2rem;
+        padding:0 .2rem;
+
+        .titleLine {
+            width: 100%;
+            height: 1rem;
+            // position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom:.02rem solid #ccc; 
+            // padding: 0 .2rem;
+
+            .titleName {
+                // color: #000;
+                flex: 1;
+                height: 100%;
+                line-height: 1rem;
+                font-size: .3rem;
+            }
+
+            .titleIcon {
+                width: 1rem;
+                height: auto;
+                line-height: 1rem;
+                text-align: right;
+                font-size: .4rem;
+
+                .iconfont {
+                    color:#000;
+                    font-family: "iconfont" !important;
+                    font-size: 16px;
+                    font-style: normal;
+                    -webkit-font-smoothing: antialiased;
+                }
+            }
+        }
+        // .commentList{
+        //     background: #fff;
+        //     padding: .2rem;
+        //     .commentItem{
+        //         .userInfo{
+
+        //         }
+        //         .userComment{
+
+        //         }
+        //         .commentPicList{
+
+        //         }
+        //     }
+        // }
+        .commentList {
+            // padding:.3rem .3rem;
+            background: #fff;
+            padding: .2rem;
+    
+            .commentItem {
+                   border-bottom:.02rem solid #ccc;
+                width: 100%;
+                height: auto;
+                // position: relative;
+                background: #fff;
+                color: grey;
+                padding-bottom: .1rem;
+                
+                .userInfo {
+                    //  display: flex;
+                    //  justify-content:space-between;
+                    //  line-height: .8rem;
+                    height: .8rem;
+                    line-height: .8rem;
+                    font-size: .24rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    >div:first-child {
+                        flex: 1 1;
+                        color: #000;
+                    }
+    
+                    >div:nth-child(2) {
+                        width: auto;
+                    }
+                }
+    
+                .userComment {
+                    line-height: .6rem;
+                    font-size: .3rem;
+                }
+    
+                .commentPicList {
+                    display: flex;
+                }
+            }
+            .commentItem:last-child{
+                border-bottom:none;
+            }
+        }
+        
+        .moreComment{
+            line-height: .8rem;
+            text-align: center;
+            display: block;
+        }
+    }
+}

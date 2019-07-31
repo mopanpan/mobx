@@ -12,9 +12,15 @@ import { Link } from 'react-router-dom'
 //响应observable,state值变化，视图中的observable 及computed数据会同步变化
 @observer
 class NewGoodsDetail extends Component {
+
   state = {
     flag: false
   }
+
+  // state = {
+  //     flag:false
+  // }
+
 
   componentDidMount() {
     this.props.brandDetail.getProDetail({
@@ -38,7 +44,11 @@ class NewGoodsDetail extends Component {
   }
 
   render() {
-    let { flag } = this.state;
+
+    // let { flag } = this.state;
+
+    // let {flag} = this.state;
+
     console.log(this.props)
     console.log(this.props.brandDetail.proDetail)
     console.log(this.props.brandDetail.proDetail.info)
@@ -50,7 +60,6 @@ class NewGoodsDetail extends Component {
     return (
       <div className="goodsPage">
         <Header title={info && info.name} />
-
         <div className="goodsMain">
           {gallery ? <div className="slider">
             <div className="swiper-container" ref={swiper => { this.swiper = swiper }}>
@@ -79,11 +88,11 @@ class NewGoodsDetail extends Component {
            </li>
             <li>
               <span>★</span>
-              30天无忧退货
+              48小时快速退款
             </li>
             <li>
               <span>★</span>
-              30天无忧退货
+              满88元免邮费
             </li>
           </div>
           <div className="goodsMsgWrap">

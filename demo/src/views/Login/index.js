@@ -74,10 +74,10 @@ class Login extends Component {
     // this.props.login.getLogin({phone,pwd}).then(res=>{
     //   console.log(res)
     // })
-    if (this.props.login.loginUser == 0) {
+    if (this.props.login.loginUser === 0) {
       console.log(this.props)
       this.props.history.push('/home')
-    } else if (this.props.login.loginUser == 1) {
+    } else if (this.props.login.loginUser === 1) {
       alert("有误")
     }
     this.setState({

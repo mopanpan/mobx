@@ -47,7 +47,7 @@ class Classify extends Component {
                 return <li key={item.id} onClick={() => {
                   this.props.classify.getDataClassify(item.id); {
                     RightData = this.props.classify
-                    // console.log(RightData)
+                     console.log(RightData)
                   }
                 }}>{item.name}</li>
               })

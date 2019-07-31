@@ -11,7 +11,7 @@ export default class Login{
         
        let data=await getLogin({mobile:phone,password:pwd})
             console.log(data)
-            if(data.errno==0){
+            if(data.errno===0){
                 this.loginUser=data.data
                 setToken(data.data.sessionKey)
             }else{
