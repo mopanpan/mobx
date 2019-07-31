@@ -19,6 +19,7 @@ export function livingHomeDetail(params){  // 25
 
 // {brandId,categoryId,sort:{id,price},order,page,size}
 
+//  奇趣分类的数据
 export function Manufacturer({categoryId,page,size}){
   return request.get('/goods/list',{params:{categoryId,page,size}})
 }

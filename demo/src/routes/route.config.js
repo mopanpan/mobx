@@ -20,9 +20,9 @@ import React from 'react' // eslint-disable-line
 
 //专题
 // import SpecialDetail from '../views/RouteDetail/SpecialDetail/index'
+// import TopicCommentWrite from '../views/Detail/topicCommentWrite/topicCommentWrite.js'
 
-
-// 路由懒加载
+// 路由懒加载  topicCommentWrite
 import Loadable from 'react-loadable';
 const Loading = () => {
     return <div>
@@ -92,7 +92,15 @@ const SpecialDetail = Loadable({
     loader:()=>import('../views/RouteDetail/SpecialDetail/index'),
     loading:Loading
 })
-
+const TopicCommentWrite = Loadable({
+    loader:()=>import('../views/Detail/topicCommentWrite/topicCommentWrite.js'),
+    loading:Loading
+})
+//MoreComment
+const MoreComment = Loadable({
+    loader:()=>import('../views/Detail/topicCommentWrite/moreComment/moreComment.js'),
+    loading:Loading
+})
 
 const route = [
     {
@@ -127,6 +135,14 @@ const route = [
         path: "/categorysDetail/:id",
         component: CategorysDetail
     },
+    {
+        path: "/topicCommentWrite/:id",
+        component: TopicCommentWrite
+    },
+    {
+        path: "/moreComment/:id",
+        component: MoreComment
+    },//moreComment
     // 专题
     {
         path: "/specialtopic/:id",
