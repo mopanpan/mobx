@@ -107,6 +107,10 @@ const Collection = Loadable({
     loader:()=>import('../views/Detail/Collection/Collection'),
     loading:Loading
 })
+const CollectionDetail = Loadable({
+    loader:()=>import('../views/Detail/CollectionDetail/CollectionDetail'),
+    loading:Loading
+})
 
 
 const route = [
@@ -159,6 +163,13 @@ const route = [
         path: "/collect",
         component: Collection
     },
+    {
+        path: "/collectDetail/:id",
+        component: CollectionDetail
+    },
+
+
+    
     {
         path: "/",
         component: Index,
