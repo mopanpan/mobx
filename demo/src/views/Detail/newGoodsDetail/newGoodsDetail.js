@@ -21,7 +21,10 @@ class NewGoodsDetail extends Component {
   //     flag:false
   // }
 
-
+  tocart=(item)=>{
+   console.log(item,'25')
+  this.props.history.push(`/cateDetail/${item}`)
+}
   componentDidMount() {
     this.props.brandDetail.getProDetail({
       id: this.props.match.params.id
@@ -67,7 +70,7 @@ class NewGoodsDetail extends Component {
                 {
                   gallery && gallery.map(item => (
                     <div className="swiper-slide" key={item.id}>
-                      <div className="topGoodsItem">
+                      <div className="topGoodsItem" >
                         <img src={item.img_url} alt="" />
                       </div>
                     </div>
@@ -112,7 +115,7 @@ class NewGoodsDetail extends Component {
             <div className="goodsAttributeLine">
               商品参数
             </div>
-            <div className="goodsAttributeList">
+            <div className="goodsAttributeList" >
               {
                 attribute && attribute.map((item, index) => (
                   <div className="goodsAttributeItem" key={index}>

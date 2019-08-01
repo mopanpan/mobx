@@ -28,8 +28,8 @@ class Classify extends Component {
   render() {
     let { RightData } = this.state
     // console.log(this.props.classifyhead.data,'count')//获取件数
-    // console.log(this.props,'555')
-
+    const banner=this.props.classify.data
+    //  const {activeCatalogMsg}=this.props
 
 
     return (
@@ -55,8 +55,10 @@ class Classify extends Component {
 
           </div>
           <div className="SecRight">
-            <div className="banner">
-
+            <div className="banner" 
+             style={{backgroundImage:`url(${banner.wap_banner_url})`}}
+            >
+               {banner.front_name}
             </div>
             <div className="ImgBox">
               {

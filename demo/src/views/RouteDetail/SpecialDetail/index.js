@@ -18,6 +18,10 @@ class SpecialDetail extends Component {
     toBack = () => {
         this.props.history.goBack(-1)
     }
+    commit=(item)=>{
+        console.log(item)
+        this.props.history.push(`/moreComment/${item}`)
+    }
 
     render() {
         //this.props.specialTopic.data
@@ -58,9 +62,13 @@ class SpecialDetail extends Component {
                                                 <p>{item.content} </p>
                                             </div>
                                         </div>
+                                       
                                     </div>
+                                   
                                 </div>
+                                
                             ))
+                           
                         }
                     </div>
                     <p style={{ width: '100%', height: '0.1rem', lineHeight: '1rem', textAlign: 'center' }}>推荐专题</p>
