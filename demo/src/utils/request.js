@@ -4,8 +4,8 @@ import {getToken} from '../utils/index.js'
 
 // create an axios instance
 const service = axios.create({  // 前端的接口
-   baseURL:'http://169.254.12.22:8888',
-  //  baseURL:'http://169.254.12.254:8888',
+  // baseURL:'http://169.254.12.22:8888',
+   baseURL:'http://169.254.12.254:8888',
   //  baseURL:'http://192.168.43.175:8888',
   //  baseURL:'http://127.0.0.1:8888',
    timeout: 5000 // request timeout

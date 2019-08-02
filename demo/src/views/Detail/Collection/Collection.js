@@ -13,7 +13,7 @@ class Collection extends Component {
     toCollectionDetail = (item) => {
         console.log(item)
         this.props.collectionDetail.getCollectionDetailData(item)
-        this.props.history.push(`/collectDetail/${item}`)
+        this.props.history.push(`/newGoodsDetail/${item}`)
     }
 
     componentDidMount() {
