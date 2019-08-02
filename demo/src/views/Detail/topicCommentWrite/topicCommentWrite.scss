@@ -21,7 +21,7 @@
                 outline: 0;
             }
 
-            span {
+            >span {
                 text-align: right;
                 background: #fff;
                 padding: 0 .1rem 0 0;
@@ -40,7 +40,7 @@
             justify-content: space-between;
 
             // background: pink;
-            span {
+            >span {
                 display: inline-block;
                 color: #fff;
                 background-color: #108ee9;

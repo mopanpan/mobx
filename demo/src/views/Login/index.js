@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 import "./index.scss"
 import { Button } from "antd"
 import { inject, observer } from 'mobx-react';
-import { BrowserRouter as Router, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+
 @inject('login')
 @observer
-
 class Login extends Component {
 
   state = {
@@ -74,10 +74,11 @@ class Login extends Component {
     // this.props.login.getLogin({phone,pwd}).then(res=>{
     //   console.log(res)
     // })
-    if (this.props.login.loginUser == 0) {
+    if (this.props.login.loginUser == 0) {// eslint-disable-line
+      console.log(this.props.login.loginUser)
       console.log(this.props)
       this.props.history.push('/home')
-    } else if (this.props.login.loginUser == 1) {
+    } else if (this.props.login.loginUser == 1) {// eslint-disable-line
       alert("有误")
     }
     this.setState({

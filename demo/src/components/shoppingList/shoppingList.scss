@@ -1,0 +1,92 @@
+.cartGoodsItem {
+    background: #fff;
+
+    .isCheckItem {
+        display: flex;
+        // height: 2.2rem;
+        padding: .2rem .2rem .2rem 0;
+        background: #fff;
+        margin-top: 1px;
+    }
+
+    // .goodsImg {} 
+
+    .cartGoodEditWrap {
+        flex: 1 1;
+        min-width: 0;
+
+        >div {
+            height: 50%;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: .2rem;
+        }
+
+        .cartEditSizeName {
+            font-size: .3rem;
+        }
+
+        .cartEditNum {
+            display: flex;
+
+            :nth-child(1) {
+                width: auto;
+                // background: cyan;
+            }
+
+            :nth-child(2) {
+                // flex: 1;
+                // background: pink;
+
+                display: flex;
+                flex: 1 1;
+                flex-direction: row-reverse;
+
+                .countOp {
+                    // display: flex;
+                    // justify-content: space-between;
+                    width: auto;
+                    display: flex;
+
+                    >div {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: .5rem;
+                       
+                        // box-sizing: border-box;
+                    }
+
+                    :nth-child(1) {
+                        width: .6rem;
+                        height: .6rem; 
+                        vertical-align: initial;
+                        // line-height: .02rem;
+                        border: 1px solid #dcdcdc;
+                    }
+
+                    :nth-child(2) {
+                        min-width: 1rem;
+                        height: .6rem;
+                        padding: 0 .2rem;
+                        font-size: .32rem;
+                        border: 1px solid #dcdcdc;
+                        border-right: none;
+                        border-left: none;
+                    }
+
+                    :nth-child(3) {
+                        width: .6rem;
+                        height: .6rem;
+                        // line-height: .1rem;
+                        border: 1px solid #dcdcdc;
+                    }
+                }
+            }
+        }
+    }
+}

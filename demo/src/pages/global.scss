@@ -10,15 +10,6 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    -webkit-appearance: none;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select:none;
-    user-select:none;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: initial;
-    font-weight: 400;
 }
 
 a{
@@ -28,7 +19,6 @@ a{
 
 body{
   font-size: 0.32rem;
-  -webkit-overflow-scrolling: touch;
 }
 
 html,
@@ -62,6 +52,7 @@ body,
         display: flex;
         align-items: center;
         box-shadow: 0 0 0.2rem #999;
+        margin-bottom: 0;
         li {
             flex: 1;
             text-align: center;

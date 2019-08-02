@@ -28,27 +28,29 @@ class TopicCommentWrite extends Component {
   // 点击留言
   leaveMessage() {
     // console.log(this.state.message);
-    // if (this.state.message) {
-    //   return false
+    if (!this.state.message) {//没有输入内容的话  return 终止执行
+      return
+    } else {//有内容添加 并且跳转页面
 
-    // } else {
-    //   this.setState({
-    //     message: ""
-    //   })
-    //   this.props.history.go(-1)
-    // }
+      // this.props.history.go(-1)
+      this.props.brandDetail.addCommentList({
+        content: this.state.message,
+        valueId: this.props.match.params.id,
+        typeId: 1,
+      });
+      this.props.history.go(-1);
+      this.setState({
+        message: ""
+      })
+    }
 
-   this.props.brandDetail.addCommentList({
-     content:this.state.message,
-     valueId:this.props.match.params.id,
-     typeId:1,
-   });
-  //  this.props.history.go(-1)
-  //  setTimeout(() => {
-  //    if(this.props.brandDetail.code){
-  //       this.props.history.go(-1);
-  //    }
-  //  }, 1000);
+
+    //  this.props.history.go(-1)
+    //  setTimeout(() => {
+    //    if(this.props.brandDetail.code){
+    //       this.props.history.go(-1);
+    //    }
+    //  }, 1000);
     // this.props.special.writeCommentList({content:this.state.textValue, typeId: 1, valueId:this.props.match.params.id});
 
     // setTimeout(()=>{
@@ -56,7 +58,7 @@ class TopicCommentWrite extends Component {
     //         this.props.history.go(-1)
     //     }
     // },1000)
- 
+
 
 
   }
@@ -80,7 +82,7 @@ class TopicCommentWrite extends Component {
               {/* style={{ display: "none" }}  onClick={this.state.message.length ?} */}
               <div className="am-button am-button-small" style={{ display: this.state.message.length ? 'block' : 'none' }}
                 onClick={this.clickEmpty.bind(this)}>
-                <span>清空</span>
+                <span>清 空</span>
               </div>
 
               {/* { this.state.message.length ? <div className="am-button am-button-small"
@@ -92,7 +94,7 @@ class TopicCommentWrite extends Component {
             <div>
               <div className="am-button am-button-primary am-button-small"
                 onClick={this.leaveMessage.bind(this)}>
-                <span>留言</span>
+                <span>留 言</span>
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ import React from 'react' // eslint-disable-line
 import Loadable from 'react-loadable';
 const Loading = () => {
     return <div>
-        <img src="http://5b0988e595225.cdn.sohucs.com/images/20170927/a3c59b2274a64221bc7a4b939677f821.gif" alt="" />
+        <img src="http://5b0988e595225.cdn.sohucs.com/images/20170927/a3c59b2274a64221bc7a4b939677f821.gif" alt="" style={{width:'100%',height:'100%'}} />
     </div>
 }
 

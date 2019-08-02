@@ -16,6 +16,9 @@ import ClassifyList from './modules/classify'//点dl跳详情
 import SearchHelper from './modules/searchHelper'//搜索页
 import Collection from './modules/collection.js';//我的收藏
 
+//购物车页
+import Cart from './modules/cart.js';
+
 
 // 实例化模块
 // 首页实例化
@@ -24,7 +27,7 @@ const home = new Home();
 const classify = new Classify();
 const livHomeDetail = new LivHomeDetail();
 const brandDetail = new BrandDetail()
-const login=new Login()
+const login = new Login()
 
 
 // 专题实例化
@@ -34,9 +37,13 @@ const specialDetailList = new SpecialDetailList();
 const classifyhead = new ClassifyHead();
 const classifyList = new ClassifyList();
 const searchHelper = new SearchHelper();
-const collection=new Collection()
+const collection = new Collection()
 
-export default{
+
+//购物车页实例化
+const cart = new Cart();
+
+export default {
     login,
     loading,
     home,
@@ -49,6 +56,7 @@ export default{
     classifyhead,
     classifyList,
     searchHelper,
-    brandDetail
+    brandDetail,
+    cart
 
 }

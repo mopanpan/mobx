@@ -73,8 +73,9 @@ class Mine extends Component {
     }
   }
   loginOut () {
+    this.props.history.push('/login')
     // this.props.actions.loginFailure()
-    this.props.history.goBack('/home')
+    // this.props.history.goBack('/login')
     window.localStorage.removeItem('token')
     window.localStorage.removeItem('nideShopUser')
   }
