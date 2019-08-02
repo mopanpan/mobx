@@ -28,8 +28,6 @@ export default class Login {
     //     }
 
     // }
-
-
 }
 
 

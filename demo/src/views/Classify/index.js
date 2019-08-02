@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './Classify.scss'
 import { inject, observer } from 'mobx-react';
-
 @inject('classify', 'classifyList', 'classifyhead')
 @observer
 
@@ -17,8 +16,8 @@ class Classify extends Component {
   }
 
   toSearch = () => {
-    this.props.history.push('/SearchDetail');
 
+    this.props.history.push('/SearchDetail');
   }
 
   componentDidMount() {
@@ -27,9 +26,18 @@ class Classify extends Component {
   }
 
   render() {
+
     const { RightData } = this.state;  // eslint-disbale-line
     // console.log(this.props.classifyhead.data,'count')//获取件数
     // console.log(this.props,'555')
+
+   
+    // console.log(this.props.classifyhead.data,'count')//获取件数
+    const banner=this.props.classify.data
+    //  const {activeCatalogMsg}=this.props
+
+
+
     return (
       <div className="ClassifyPage">
         <div className="header">
@@ -43,16 +51,27 @@ class Classify extends Component {
             {
               this.props.classify.monrtList && this.props.classify.monrtList.map(item => {
                 return <li key={item.id} onClick={() => {
-                  this.props.classify.getDataClassify(item.id);
-                  RightData = this.props.classify;    // eslint-disbale-line
-                  // console.log(RightData);
+
+                 
+                  this.props.classify.getDataClassify(item.id) 
+                    RightData = this.props.classify
+                     console.log(RightData)
+                  
+
                 }}>{item.name}</li>
               })
             }
 
           </div>
           <div className="SecRight">
-            <div className="banner">
+
+           
+
+
+            <div className="banner" 
+             style={{backgroundImage:`url(${banner.wap_banner_url})`}}
+            >
+               {banner.front_name}
 
             </div>
             <div className="ImgBox">
@@ -68,11 +87,17 @@ class Classify extends Component {
               }
             </div>
           </div>
+
+
+
+
+
         </div>
       </div>
     )
   }
 }
+
 
 
 

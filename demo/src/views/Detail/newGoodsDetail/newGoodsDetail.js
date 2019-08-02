@@ -12,10 +12,19 @@ import { Link } from 'react-router-dom'
 //响应observable,state值变化，视图中的observable 及computed数据会同步变化
 @observer
 class NewGoodsDetail extends Component {
+
+  state = {
+    flag: false
+  }
+
   // state = {
   //     flag:false
   // }
 
+  tocart=(item)=>{
+   console.log(item,'25')
+  this.props.history.push(`/cateDetail/${item}`)
+}
   componentDidMount() {
     this.props.brandDetail.getProDetail({
       id: this.props.match.params.id
@@ -38,7 +47,11 @@ class NewGoodsDetail extends Component {
   }
 
   render() {
+
+    // let { flag } = this.state;
+
     // let {flag} = this.state;
+
     console.log(this.props)
     console.log(this.props.brandDetail.proDetail)
     console.log(this.props.brandDetail.proDetail.info)
@@ -46,18 +59,18 @@ class NewGoodsDetail extends Component {
     console.log(info);
     let { goodsList } = this.props.brandDetail.relatePro;
     console.log(goodsList);
-  
+
     return (
       <div className="goodsPage">
         <Header title={info && info.name} />
         <div className="goodsMain">
-          { gallery ? <div className="slider">
+          {gallery ? <div className="slider">
             <div className="swiper-container" ref={swiper => { this.swiper = swiper }}>
               <div className="swiper-wrapper">
                 {
                   gallery && gallery.map(item => (
                     <div className="swiper-slide" key={item.id}>
-                      <div className="topGoodsItem">
+                      <div className="topGoodsItem" >
                         <img src={item.img_url} alt="" />
                       </div>
                     </div>
@@ -102,7 +115,7 @@ class NewGoodsDetail extends Component {
             <div className="goodsAttributeLine">
               商品参数
             </div>
-            <div className="goodsAttributeList">
+            <div className="goodsAttributeList" >
               {
                 attribute && attribute.map((item, index) => (
                   <div className="goodsAttributeItem" key={index}>

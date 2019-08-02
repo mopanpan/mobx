@@ -11,6 +11,12 @@ import Loading from '../../components/Loading/Loading.js' // eslint-disable-line
 //响应observable,state值变化，视图中的observable 及computed数据会同步变化
 @observer
 class Home extends Component { 
+    
+     tonew=(item)=>{
+         this.props.history.push(`/newGoodsDetail/${item}`)
+     }
+
+
     componentDidMount() {
         
 
@@ -124,14 +130,14 @@ class Home extends Component {
                         <div className="hotGoodsWrap">
                             {
                                 hotGoodsList && hotGoodsList.map(item => (
-                                    <Link to={`/hotGoodsDetail/${item.id}`} className="hotGoodsItem" key={item.id}>
+                                    <div className="hotGoodsItem" key={item.id} onClick={()=>this.tonew(item.id)}>
                                         <img src={item.list_pic_url} alt="" />
                                         <div className="hotGoodsInfos">
                                             <div className="hotGoodsName">{item.name}</div>
                                             <div className="hotGoodsInfo">{item.goods_brief}</div>
                                             <div className="hotGoodsPrice">￥{item.retail_price}</div>
                                         </div>
-                                    </Link>
+                                    </div>
                                 )
                                 )
                             }

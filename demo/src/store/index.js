@@ -15,6 +15,7 @@ import ClassifyHead from './modules/classifyhead'//头部总数
 import ClassifyList from './modules/classify'//点dl跳详情
 import SearchHelper from './modules/searchHelper'//搜索页
 import Collection from './modules/collection.js';//我的收藏
+import CollectionDetail from './modules/collectionDetail.js';//我的收藏详情
 
 //购物车页
 import Cart from './modules/cart.js';
@@ -37,11 +38,13 @@ const specialDetailList = new SpecialDetailList();
 const classifyhead = new ClassifyHead();
 const classifyList = new ClassifyList();
 const searchHelper = new SearchHelper();
-const collection = new Collection()
+
 
 
 //购物车页实例化
 const cart = new Cart();
+const collection=new Collection()
+const collectionDetail=new CollectionDetail()
 
 export default {
     login,
@@ -53,6 +56,7 @@ export default {
     livHomeDetail,
     specialDetailList,
     collection,
+    collectionDetail,
     classifyhead,
     classifyList,
     searchHelper,
