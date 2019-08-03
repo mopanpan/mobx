@@ -5,7 +5,9 @@ import { inject, observer } from 'mobx-react';
 @observer
 
 class Classify extends Component {
-  
+  state = {
+    RightData: null  // eslint-disbale-line
+  }
 
   clickDl = (item) => {
     // console.log(item)
@@ -25,13 +27,14 @@ class Classify extends Component {
 
   render() {
 
-  
+    let { RightData } = this.state;  // eslint-disbale-line
+
     // console.log(this.props.classifyhead.data,'count')//获取件数
     // console.log(this.props,'555')
 
-   
+
     // console.log(this.props.classifyhead.data,'count')//获取件数
-    const banner=this.props.classify.data
+    const banner = this.props.classify.data
     //  const {activeCatalogMsg}=this.props
 
 
@@ -48,22 +51,20 @@ class Classify extends Component {
           <div className="SecLeft">
             {
               this.props.classify.monrtList && this.props.classify.monrtList.map(item => {
-                return <li key={item.id} onClick={() => {  
-                  this.props.classify.getDataClassify(item.id) 
+                return <li key={item.id} onClick={() => {
+                  this.props.classify.getDataClassify(item.id)
+                  RightData = this.props.classify
+                  console.log(RightData)
                 }}>{item.name}</li>
               })
             }
 
           </div>
           <div className="SecRight">
-
-           
-
-
-            <div className="banner" 
-             style={{backgroundImage:`url(${banner.wap_banner_url})`}}
+            <div className="banner"
+              style={{ backgroundImage: `url(${banner.wap_banner_url})` }}
             >
-               {banner.front_name}
+              {banner.front_name}
 
             </div>
             <div className="ImgBox">
@@ -79,6 +80,11 @@ class Classify extends Component {
               }
             </div>
           </div>
+
+
+
+
+
         </div>
       </div>
     )
