@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import "./index.scss"
 import { Button } from "antd"
@@ -8,7 +7,6 @@ import { withRouter } from "react-router-dom";
 @inject('login')
 @observer
 class Login extends Component {
-
   state = {
     phone: "",
     pwd: ""
@@ -21,6 +19,7 @@ class Login extends Component {
         <div className="logo">
           <img src="http://yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="" />
         </div>
+       
         <div className="loginMain">
           <div className="inputWrap onePx_bottom">
             <input type="text" placeholder="请输入手机号码"
@@ -51,6 +50,7 @@ class Login extends Component {
             }}>登录</Button>
           </div>
         </div>
+      
       </div>
     )
   }

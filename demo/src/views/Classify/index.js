@@ -5,9 +5,9 @@ import { inject, observer } from 'mobx-react';
 @observer
 
 class Classify extends Component {
-  // state = {
-  //   RightData: null
-  // }
+  state = {
+    RightData: null  // eslint-disbale-line
+  }
 
   clickDl = (item) => {
     // console.log(item)
@@ -16,6 +16,7 @@ class Classify extends Component {
   }
 
   toSearch = () => {
+
     this.props.history.push('/SearchDetail');
   }
 
@@ -45,6 +46,7 @@ class Classify extends Component {
           </p>
         </div>
         <div className="ClassiySec">
+
           <div className="SecLeft">
             {
               this.props.classify.monrtList && this.props.classify.monrtList.map(item => {
@@ -53,6 +55,7 @@ class Classify extends Component {
                 }}>{item.name}</li>
               })
             }
+
           </div>
           <div className="SecRight">
             <div className="banner"

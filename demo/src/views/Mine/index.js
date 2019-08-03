@@ -59,7 +59,6 @@ class Mine extends Component {
         name: '账户安全'
       }
     ]
-
   }
   componentDidMount() {
     // this.props.address.getListData()
@@ -110,7 +109,6 @@ class Mine extends Component {
             )
           }
         </div>
-
         <div className="loginOut" onClick={this.loginOut.bind(this)}>退出登录</div>
       </div>
     )
