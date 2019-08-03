@@ -5,9 +5,7 @@ import { inject, observer } from 'mobx-react';
 @observer
 
 class Classify extends Component {
-  state = {
-    RightData: null
-  }
+  
 
   clickDl = (item) => {
     // console.log(item)
@@ -27,7 +25,7 @@ class Classify extends Component {
 
   render() {
 
-    const { RightData } = this.state;  // eslint-disbale-line
+  
     // console.log(this.props.classifyhead.data,'count')//获取件数
     // console.log(this.props,'555')
 
@@ -50,14 +48,8 @@ class Classify extends Component {
           <div className="SecLeft">
             {
               this.props.classify.monrtList && this.props.classify.monrtList.map(item => {
-                return <li key={item.id} onClick={() => {
-
-                 
+                return <li key={item.id} onClick={() => {  
                   this.props.classify.getDataClassify(item.id) 
-                    RightData = this.props.classify
-                     console.log(RightData)
-                  
-
                 }}>{item.name}</li>
               })
             }
@@ -87,11 +79,6 @@ class Classify extends Component {
               }
             </div>
           </div>
-
-
-
-
-
         </div>
       </div>
     )

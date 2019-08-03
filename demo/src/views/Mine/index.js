@@ -59,7 +59,6 @@ class Mine extends Component {
         name: '账户安全'
       }
     ]
-
   }
 
 
@@ -72,7 +71,8 @@ class Mine extends Component {
       Toast.offline(`${item.name}功能还未解锁，请耐心等候~`, 1)
     }
   }
-  loginOut () {
+
+  loginOut() {
     this.props.history.push('/login')
     // this.props.actions.loginFailure()
     // this.props.history.goBack('/login')
@@ -107,7 +107,6 @@ class Mine extends Component {
             )
           }
         </div>
-
         <div className="loginOut" onClick={this.loginOut.bind(this)}>退出登录</div>
       </div>
     )

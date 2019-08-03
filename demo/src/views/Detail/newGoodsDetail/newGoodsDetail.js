@@ -82,7 +82,7 @@ class NewGoodsDetail extends Component {
             </div>
           </div> : <div className="sliders">
               9090909
-            </div>}
+            </div> }
 
           <div className="serviceList">
             <li>
@@ -166,7 +166,6 @@ class NewGoodsDetail extends Component {
               }
             </div>
           </div>
-
         </div>
 
         <CartFooter />

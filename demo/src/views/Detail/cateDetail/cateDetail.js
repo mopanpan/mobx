@@ -4,7 +4,7 @@ import BScroll from 'better-scroll'// eslint-disable-line
 import { Link } from 'react-router-dom'
 import './cateDetail.scss'
 import Header from '../../../components/Header/Header.js';
-import { Tabs, WhiteSpace } from 'antd-mobile'; // eslint-disable-line
+import { Tabs } from 'antd-mobile'; // eslint-disable-line
 // @inject('livHomeDetail')
 
 @inject('livHomeDetail','classifyList')
