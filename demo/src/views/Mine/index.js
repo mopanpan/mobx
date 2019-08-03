@@ -61,18 +61,21 @@ class Mine extends Component {
     ]
 
   }
-
+  componentDidMount() {
+    // this.props.address.getListData()
+  }
 
   showPower(item) {
-    // console.log(item)
+    console.log(item, '58888')
     if ('link' in item) {
+      //  this.props.address.getListData()
       this.props.history.push(item.link)
 
     } else {
       Toast.offline(`${item.name}功能还未解锁，请耐心等候~`, 1)
     }
   }
-  loginOut () {
+  loginOut() {
     this.props.history.push('/login')
     // this.props.actions.loginFailure()
     // this.props.history.goBack('/login')
@@ -80,7 +83,7 @@ class Mine extends Component {
     window.localStorage.removeItem('nideShopUser')
   }
   render() {
-    // console.log(this.props,'111')
+    console.log(this.props, '111')
     const userPhone = window.localStorage.getItem('nideShopUser')
     return (
       <div id="minePage">
@@ -113,5 +116,4 @@ class Mine extends Component {
     )
   }
 }
-
 export default Mine

@@ -16,7 +16,7 @@ import ClassifyList from './modules/classify'//点dl跳详情
 import SearchHelper from './modules/searchHelper'//搜索页
 import Collection from './modules/collection.js';//我的收藏
 import CollectionDetail from './modules/collectionDetail.js';//我的收藏详情
-
+import Address from './modules/address.js';
 //购物车页
 import Cart from './modules/cart.js';
 
@@ -38,6 +38,7 @@ const specialDetailList = new SpecialDetailList();
 const classifyhead = new ClassifyHead();
 const classifyList = new ClassifyList();
 const searchHelper = new SearchHelper();
+const address = new Address();
 
 
 
@@ -61,6 +62,7 @@ export default {
     classifyList,
     searchHelper,
     brandDetail,
-    cart
+    cart,
+    address
 
 }

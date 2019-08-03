@@ -120,6 +120,10 @@ const CollectionDetail = Loadable({
     loader:()=>import('../views/Detail/CollectionDetail/CollectionDetail'),
     loading:Loading
 })
+const Address = Loadable({
+    loader:()=>import('../views/Detail/Address/address'),
+    loading:Loading
+})
 
 
 const route = [
@@ -164,7 +168,10 @@ const route = [
         component: MoreComment
     },//moreComment
     // 专题
-
+    {
+        path: "/address",
+        component: Address
+    },
 
 
 
