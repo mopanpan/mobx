@@ -7,7 +7,7 @@ import { inject, observer } from 'mobx-react';
 
 class Classify extends Component {
   state = {
-    RightData: null
+    RightData: null  // eslint-disbale-line
   }
 
   clickDl = (item) => {
@@ -27,7 +27,7 @@ class Classify extends Component {
   }
 
   render() {
-    const { RightData } = this.state;  // eslint-disbale-line
+    let { RightData } = this.state;  // eslint-disbale-line
     // console.log(this.props.classifyhead.data,'count')//获取件数
     // console.log(this.props,'555')
     return (
@@ -45,7 +45,7 @@ class Classify extends Component {
                 return <li key={item.id} onClick={() => {
                   this.props.classify.getDataClassify(item.id);
                   RightData = this.props.classify;    // eslint-disbale-line
-                  // console.log(RightData);
+                  console.log(RightData);
                 }}>{item.name}</li>
               })
             }

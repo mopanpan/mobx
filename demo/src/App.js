@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';//BrowserRouter
 import { MapRoute, route } from './routes/index.js'
 // 引入全局的scss样式
 // import './pages/global.scss';
@@ -12,9 +12,9 @@ export class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <BrowserRouter>
+        <HashRouter>
           <MapRoute route={route}></MapRoute>
-        </BrowserRouter>
+        </HashRouter>
         <Loading />
       </React.Fragment>
     )

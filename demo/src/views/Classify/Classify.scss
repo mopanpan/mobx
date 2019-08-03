@@ -1,97 +1,95 @@
-
-
 .ClassifyPage {
+  width: 100%;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .header {
     width: 100%;
-    // height: 100%;
+    height: 1rem;
+    background: #fff;
+    border-bottom: 0.03rem solid #ccc;
+    padding: 0 0.5rem;
+
+    p {
+      width: 80%;
+      height: 0.7rem;
+      text-align: center;
+      line-height: 0.7rem;
+      background: #ccc;
+
+    }
+  }
+
+  .ClassiySec {
+    width: 100%;
+    flex: 1;
+    // background:#f00;
     display: flex;
-    flex-direction: column;
 
-    .header {
+    .SecLeft {
+      width: 30%;
+      height: 100%;
+      // background:#00f;
+      border-right: 0.02rem solid #ccc;
+
+      li {
         width: 100%;
-        height: 1rem;
-        background: #fff;
-        border-bottom: 0.03rem solid #ccc;
-        padding: 0 0.5rem;
-
-        p {
-            width: 80%;
-            height: 0.7rem;
-            text-align: center;
-            line-height: 0.7rem;
-            background: #ccc;
-
-        }
+        height: 0.9rem;
+        border-bottom: 0.01rem solid #ccc;
+        text-align: center;
+        line-height: 0.9rem;
+      }
     }
 
-    .ClassiySec {
+    .SecRight {
+      flex: 1;
+      // background:#0f0;
+      overflow: auto;
+
+      .banner {
         width: 100%;
-        flex: 1;
-        // background:#f00;
+        height: 2rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        text-align: center;
+        color: #00f;
+        font-size: 0.35rem;
+      }
+
+      .ImgBox {
+        width: 100%;
+        height: 100%;
         display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
 
-        .SecLeft {
-            width: 30%;
-            height: 100%;
-            // background:#00f;
-            border-right: 0.02rem solid #ccc;
+        dl {
+          width: 50%;
+          text-align: center;
+          margin-top: 0.4rem;
 
-            li {
-                width: 100%;
-                height: 0.9rem;
-                border-bottom: 0.01rem solid #ccc;
-                text-align: center;
-                line-height: 0.9rem;
+          dt {
+            width: 2.1rem;
+            height: 2.1rem;
+
+            img {
+              width: 100%;
+              height: 100%;
             }
+          }
+
+          dd {
+            margin-top: 0.3rem;
+          }
         }
-
-        .SecRight {
-            flex: 1;
-            // background:#0f0;
-            overflow: auto;
-
-            .banner {
-                width: 100%;
-                height: 2rem;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            p {
-                text-align: center;
-                color: #00f;
-                font-size: 0.35rem;
-            }
-
-            .ImgBox {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                overflow: auto;
-
-                dl {
-                    width: 50%;
-                    text-align: center;
-                    margin-top: 0.4rem;
-
-                    dt {
-                        width: 2.1rem;
-                        height: 2.1rem;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-
-                    dd {
-                        margin-top: 0.3rem;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }
